@@ -14,18 +14,17 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
           <div>
             <Reveal>
-              <p className="eyebrow text-cyan-brand">Next step</p>
+              <p className="eyebrow text-cyan-brand">Get started</p>
             </Reveal>
             <MaskLines
               as="h2"
               className="display-lg mt-6 max-w-[16ch] font-semibold"
-              lines={["Tell us what", "the floor needs."]}
+              lines={["Let's solve the", "skill gap together."]}
             />
             <Reveal delay={0.12}>
               <p className="lede mt-7 max-w-[46ch] text-white/60">
-                Send us the role you are struggling to fill, or the mandate you need
-                delivered. We will come back with a scope, a timeline and a number —
-                not a brochure.
+                Tell us what&apos;s holding back your production line or field
+                operations.
               </p>
             </Reveal>
             <Reveal delay={0.18}>
@@ -34,7 +33,7 @@ export default function Footer() {
                   href="/contact"
                   className="group inline-flex items-center gap-3 rounded-full bg-cyan-brand px-7 py-4 font-medium text-indigo-ink transition-colors duration-300 hover:bg-white"
                 >
-                  Start a programme
+                  Start a conversation
                   <svg width="15" height="15" viewBox="0 0 14 14" fill="none" aria-hidden className="transition-transform duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-1">
                     <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>

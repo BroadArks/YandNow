@@ -11,15 +11,24 @@ export const metadata: Metadata = {
     "The YandNow programme archive: fourteen delivered programmes from 2020 to 2026, with partners, trades and photographs from each cohort.",
 };
 
+// The archive page words each headline figure for the verification behind it,
+// rather than the homepage's shorter notes.
+const OUTCOME_NOTES = [
+  "Hands-on execution across all 6 verticals",
+  "Permanent facilities, mobile units and on-site setups",
+  "Verified 90 days after certification",
+  "From Meghalaya to Karnataka",
+];
+
 export default function ImpactPage() {
   const years = [...new Set(programmes.map((p) => p.year))].length;
 
   return (
     <>
       <PageHero
-        eyebrow="Impact"
-        lines={["Every programme", "we have run."]}
-        lede="No composite case studies and no stock imagery. This is the delivery record — partner, place, trades and photographs, filed by year."
+        eyebrow="Proven track record · Impact archive"
+        lines={["14 programmes.", "Hands-on training", "across all 6 verticals."]}
+        lede="No composite stories, no stock photos and no inflated figures. This is our complete execution history — real site locations, specific trades, verified numbers and ground photography, logged year by year."
         photo="defence-assembly"
         photoAlt="Uniformed personnel assembled in a hall for a technical training briefing"
         breadcrumb={[
@@ -27,9 +36,9 @@ export default function ImpactPage() {
           { label: "Impact", href: "/impact" },
         ]}
         meta={[
-          { label: "Programmes", value: String(programmes.length) },
-          { label: "Programme years", value: String(years) },
-          { label: "Photographs", value: "61 curated" },
+          { label: "Active & completed programmes", value: String(programmes.length) },
+          { label: "Programme years (2020–2026)", value: String(years) },
+          { label: "Curated field photographs", value: "61" },
         ]}
       />
 
@@ -40,7 +49,7 @@ export default function ImpactPage() {
             <p className="eyebrow text-cyan-soft">Verified outcomes</p>
           </Reveal>
           <div className="mt-12 grid grid-cols-2 gap-y-12 border-t border-white/15 pt-12 lg:grid-cols-4 lg:gap-x-8">
-            {metrics.map((m) => (
+            {metrics.map((m, i) => (
               <Reveal key={m.label}>
                 <Counter
                   to={m.value}
@@ -49,7 +58,7 @@ export default function ImpactPage() {
                 />
                 <p className="mt-3.5 text-[1.0625rem] font-medium">{m.label}</p>
                 <p className="mt-1.5 max-w-[24ch] text-sm leading-relaxed text-white/55">
-                  {m.note}
+                  {OUTCOME_NOTES[i] ?? m.note}
                 </p>
               </Reveal>
             ))}
@@ -69,36 +78,39 @@ export default function ImpactPage() {
             <MaskLines
               as="h2"
               className="display-md mt-6 max-w-[18ch] font-semibold"
-              lines={["The caveats,", "stated upfront."]}
+              lines={["Clear criteria,", "clearly stated."]}
             />
           </div>
           <div className="space-y-6 text-[1.0625rem] leading-relaxed text-white/60">
             <Reveal>
               <p>
-                <span className="font-medium text-paper-warm">Trained</span> counts
-                only trainees who completed a course and sat third-party assessment.
-                Enrolments, walk-ins and awareness-session attendees are excluded, which
-                is why our headline number is smaller than it could be.
+                <span className="font-medium text-paper-warm">Trainee counts.</span> We
+                only count individuals who fully completed their course and cleared an
+                independent third-party assessment. Enrolments, walk-ins and one-off
+                awareness attendees are excluded — keeping our headline numbers honest
+                and grounded.
               </p>
             </Reveal>
             <Reveal delay={0.06}>
               <p>
-                <span className="font-medium text-paper-warm">Placement</span> is
-                verified at 90 days by contacting the employer, not the trainee. Where
-                we could not reach either, the case is counted as not placed.
+                <span className="font-medium text-paper-warm">90-day placement verification.</span>{" "}
+                Job placements are verified 90 days after certification by direct
+                employer confirmation. If neither employer nor graduate can be verified,
+                the case is recorded as not placed.
               </p>
             </Reveal>
             <Reveal delay={0.12}>
               <p>
-                <span className="font-medium text-paper-warm">Enterprise survival</span>{" "}
-                for micro-entrepreneurship programmes is measured at twelve months and
-                requires evidence of trading in the preceding quarter.
+                <span className="font-medium text-paper-warm">12-month enterprise survival.</span>{" "}
+                Business sustainability for micro-entrepreneurs is evaluated at 12 months
+                and requires proof of active trading in the preceding quarter.
               </p>
             </Reveal>
             <Reveal delay={0.18}>
               <p>
-                Figures are cumulative to March 2026. Where a programme is still running,
-                only completed cohorts are included.
+                <span className="font-medium text-paper-warm">Reporting cutoff.</span> All
+                figures are cumulative up to March 2026. For ongoing projects, only fully
+                completed cohorts are counted.
               </p>
             </Reveal>
           </div>

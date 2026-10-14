@@ -53,6 +53,10 @@ export type Solution = {
   formats: string[];
   outcomes: { stat: string; label: string }[];
   gallery: PhotoKey[];
+  /** "What we deliver" headline, pre-broken into display lines. */
+  deliverLines: string[];
+  /** "From this vertical" gallery headline, pre-broken into display lines. */
+  fieldLines: string[];
 };
 
 export const solutions: Solution[] = [
@@ -62,9 +66,9 @@ export const solutions: Solution[] = [
     title: "Corporate Training",
     short: "Corporate",
     summary:
-      "Technical and behavioural upskilling for service networks, dealerships and frontline teams.",
+      "Sharpening technical know-how and floor discipline for service networks, dealer technicians and frontline crews.",
     lede:
-      "Your technicians are the product experience. We build curricula around your service manuals, your diagnostic tools and your quality gates — then run them across the dealer network until the floor moves as one.",
+      "Your technicians are the product experience. We build hands-on training around your exact service manuals, diagnostic tools and quality standards — running cohorts across your dealer network until every floor operates with confidence.",
     ctaLabel: "Open corporate training",
     hero: "engine-cohort",
     accent: "indigo",
@@ -77,28 +81,30 @@ export const solutions: Solution[] = [
     offerings: [
       {
         title: "Product & platform induction",
-        body: "New-model rollouts taught on live assemblies and cutaway rigs, so technicians meet the platform before a customer vehicle does.",
+        body: "New-model rollouts taught directly on live assemblies and cutaway rigs, ensuring technicians know the platform inside out before day one on the shopfloor.",
       },
       {
         title: "Diagnostics & electronics",
-        body: "Scan-tool workflows, sensor logic and fault-tree reasoning — taught on instrumented benches wired to real ECUs.",
+        body: "Scan-tool workflows, sensor logic and step-by-step fault-tree reasoning — practised on instrumented benches wired to real ECUs.",
       },
       {
         title: "Train-the-trainer",
-        body: "We certify your internal masters so the programme keeps running long after our team demobilises.",
+        body: "We certify your internal master technicians, giving your in-house teams the tools and structure to keep training long after our team demobilises.",
       },
       {
-        title: "Service excellence",
-        body: "Bay discipline, customer handover and documentation standards, benchmarked against your own audit scores.",
+        title: "Service excellence & floor discipline",
+        body: "Bay organisation, clean customer handovers and accurate documentation standards — benchmarked directly against your internal audit scores.",
       },
     ],
-    formats: ["On-site at your plant or dealership", "Mobile training unit", "Blended: digital theory + practical blocks"],
+    formats: ["On-site at your plant or dealership", "Mobile training unit at your gate", "Blended: short digital theory + practical floor blocks"],
     outcomes: [
-      { stat: "12,400", label: "Technicians certified" },
+      { stat: "12,400+", label: "Technicians certified" },
       { stat: "31%", label: "Drop in repeat repairs" },
       { stat: "4.2 days", label: "Average programme length" },
     ],
     gallery: ["engine-cohort", "diagnostics-console", "engine-stand-training", "component-demo", "cohort-classroom", "engine-teardown"],
+    deliverLines: ["Practical modules built", "for your service floor."],
+    fieldLines: ["Real technicians.", "Real workshop bays."],
   },
   {
     slug: "csr",
@@ -106,9 +112,9 @@ export const solutions: Solution[] = [
     title: "CSR Programmes",
     short: "CSR",
     summary:
-      "Fund-to-field delivery for corporate social responsibility mandates, with audit-ready reporting.",
+      "Deploying CSR funds directly where training happens, with full tracking and bulletproof data.",
     lede:
-      "CSR money fails on delivery, not intent. We run the last mile — mobilisation, training, certification, placement and the evidence trail your board and auditors need — under one accountable partner.",
+      "CSR succeeds when it reaches the last mile. Great intent needs grounded execution. We handle every step — mobilisation, hands-on training, certification, real placement and the transparent data trail your board and auditors require.",
     ctaLabel: "Open CSR programmes",
     hero: "medical-camp",
     accent: "cyan",
@@ -121,28 +127,30 @@ export const solutions: Solution[] = [
     offerings: [
       {
         title: "Livelihood skilling",
-        body: "Employment-linked courses chosen from district labour-demand data, not from what's convenient to teach.",
+        body: "Job-linked training selected directly from local labour demand data — focusing on skills that actually lead to work, not just what is easy to run.",
       },
       {
         title: "Community health camps",
-        body: "Screening, vision and primary-care camps run alongside skilling, so a cohort's health doesn't end its training.",
+        body: "Primary care, vision screenings and health camps delivered alongside skilling, ensuring basic health needs don't disrupt learning and progress.",
       },
       {
         title: "Environment & green skills",
-        body: "Plantation drives, clean-cooking transitions and waste-handling programmes with measured baselines.",
+        body: "Plantation drives, clean-cooking transitions and practical waste-handling programmes measured against clear environmental baselines.",
       },
       {
         title: "Impact measurement",
-        body: "Geo-tagged attendance, third-party assessment and 90/180-day tracer studies as standard deliverables.",
+        body: "Geo-tagged attendance, third-party certification and 90 to 180-day post-training tracking built into every project as standard practice.",
       },
     ],
     formats: ["District-level cohorts", "Camp-based delivery", "Multi-year programme management"],
     outcomes: [
       { stat: "₹41 Cr", label: "CSR funds deployed" },
-      { stat: "18,600", label: "Beneficiaries reached" },
+      { stat: "18,600+", label: "Beneficiaries reached" },
       { stat: "100%", label: "Programmes audit-cleared" },
     ],
     gallery: ["medical-camp", "vision-screening", "tree-plantation", "medical-camp-community", "volunteer-cohort", "plantation-hands"],
+    deliverLines: ["Grounded initiatives built", "for lasting community impact."],
+    fieldLines: ["Real communities.", "Real progress."],
   },
   {
     slug: "industry",
@@ -150,9 +158,9 @@ export const solutions: Solution[] = [
     title: "Industry Solutions",
     short: "Industry",
     summary:
-      "Shopfloor-grade training in welding, fabrication, machining, electrical and site safety.",
+      "Hands-on skill building across welding, machining and site safety. Getting workforce operators shopfloor-ready from day one.",
     lede:
-      "A weld either holds or it doesn't. Industrial trades are graded against destructive tests and site standards, taught in workshops built to the same tolerances as the plants our trainees join.",
+      "A weld either holds or it doesn't. Industrial trades are tested on site, not in theory. We teach on production-grade machinery built to the exact same tolerances as the plants our trainees join — so every worker hits the shopfloor fully ready.",
     ctaLabel: "Open industry solutions",
     hero: "welding-sparks",
     accent: "indigo",
@@ -165,28 +173,30 @@ export const solutions: Solution[] = [
     offerings: [
       {
         title: "Welding & fabrication",
-        body: "SMAW, MIG and TIG streams with weld-inspection theory, graded on visual and bend testing rather than attendance.",
+        body: "SMAW, MIG and TIG techniques combined with weld-inspection theory — graded directly on visual and bend testing rather than simple attendance.",
       },
       {
         title: "CNC & machining",
-        body: "Turning, milling and CNC programming on production-spec machines — setup, offsets, tooling and first-article inspection.",
+        body: "Turning, milling and CNC programming on production-spec equipment — covering offsets, setup, tooling and first-article inspection.",
       },
       {
         title: "Electrical & instrumentation",
-        body: "Panel wiring, motor control, LOTO discipline and instrument calibration for plant maintenance roles.",
+        body: "Panel wiring, motor control, Lockout/Tagout (LOTO) discipline and instrument calibration built for plant maintenance roles.",
       },
       {
         title: "Safety & compliance",
-        body: "Work-at-height, confined space, PPE regimes and toolbox-talk practice, mapped to your HSE framework.",
+        body: "Work-at-height, confined space protocols, PPE regimes and daily toolbox talks — mapped directly to your internal HSE framework.",
       },
     ],
     formats: ["Centre-based long-term courses", "In-plant short modules", "Assessment & certification only"],
     outcomes: [
-      { stat: "9,800", label: "Trade certifications" },
+      { stat: "9,800+", label: "Trade certifications" },
       { stat: "94%", label: "First-attempt weld pass rate" },
       { stat: "0", label: "Lost-time injuries on programme" },
     ],
     gallery: ["welding-sparks", "cnc-operation", "welding-bay", "electrical-bench", "milling-practical", "sheet-metal-bench"],
+    deliverLines: ["Practical trades taught to", "exact shopfloor standards."],
+    fieldLines: ["Real trade floors.", "Real precision."],
   },
   {
     slug: "defence",
@@ -194,9 +204,9 @@ export const solutions: Solution[] = [
     title: "Defence Programmes",
     short: "Defence",
     summary:
-      "Technical training and resettlement pathways for serving personnel and veterans.",
+      "Helping serving personnel and veterans transition smoothly into real-world industry jobs.",
     lede:
-      "Service personnel already have discipline, maintenance instinct and the ability to work a checklist under pressure. We convert that into a civilian trade credential — and, where required, bring the classroom to the unit.",
+      "Service personnel already have the discipline. We add the civilian credential. Service members bring maintenance instincts, teamwork and strong checklist discipline under pressure. We help translate those years of hands-on experience into recognised credentials, bringing the training directly to the unit when needed.",
     ctaLabel: "Open defence programmes",
     hero: "defence-engine-class",
     accent: "cyan",
@@ -209,28 +219,30 @@ export const solutions: Solution[] = [
     offerings: [
       {
         title: "Vehicle & equipment maintenance",
-        body: "Heavy-vehicle, generator and auxiliary-system maintenance taught on live engines inside our mobile units.",
+        body: "Heavy-vehicle, generator and auxiliary-system maintenance practised on live engines using our mobile training setups.",
       },
       {
         title: "Resettlement certification",
-        body: "Recognition-of-prior-learning assessment that converts years of service experience into a portable NSQF credential.",
+        body: "Recognition-of-Prior-Learning (RPL) assessments that convert years of service experience into portable national trade credentials.",
       },
       {
         title: "On-unit delivery",
-        body: "Training brought to the station or garrison — no personnel movement, no operational disruption.",
+        body: "Training brought directly to your station or garrison — eliminating personnel movement and keeping unit routine undisturbed.",
       },
       {
         title: "Second-career placement",
-        body: "Direct introductions into fleet, logistics and plant-maintenance roles that value service discipline.",
+        body: "Direct career pathways into fleet management, logistics and plant maintenance roles that value service discipline.",
       },
     ],
     formats: ["On-unit mobile deployment", "Pre-retirement cohorts", "Veteran open batches"],
     outcomes: [
-      { stat: "3,100", label: "Personnel trained" },
+      { stat: "3,100+", label: "Personnel trained" },
       { stat: "27", label: "Units & stations served" },
       { stat: "78%", label: "Placed within 6 months" },
     ],
     gallery: ["defence-engine-class", "defence-mobile-unit", "defence-assembly", "hcv-engine-bay", "van-engine-instruction", "mobile-classroom"],
+    deliverLines: ["Practical pathways from military", "service to industry careers."],
+    fieldLines: ["Real service members.", "Real career transitions."],
   },
   {
     slug: "schools",
@@ -238,9 +250,9 @@ export const solutions: Solution[] = [
     title: "School Solutions",
     short: "Schools",
     summary:
-      "Vocational exposure, career labs and NSQF-aligned electives for Classes 9 to 12.",
+      "Bridging classroom learning with real-world skills through practical career labs for Classes 9 to 12.",
     lede:
-      "Most students choose a career from a list of four jobs they've heard of. We put tools in their hands early — so the choice is made from experience rather than hearsay.",
+      "Most students pick careers from a list of four jobs they've heard of. We put real tools in their hands early — so career choices are driven by practical experience rather than hearsay.",
     ctaLabel: "Open school solutions",
     hero: "sheet-metal-bench",
     accent: "indigo",
@@ -253,28 +265,30 @@ export const solutions: Solution[] = [
     offerings: [
       {
         title: "NSQF vocational electives",
-        body: "Board-aligned trade subjects with the practical component actually delivered — equipment, consumables and instructors included.",
+        body: "Board-aligned trade subjects delivered with complete practical support — equipment, consumables and instructors fully included.",
       },
       {
         title: "Career discovery labs",
-        body: "Rotational workshops where a student handles six trades in six weeks before committing to one.",
+        body: "Rotational workshops where students explore six distinct trades over six weeks before committing to a single pathway.",
       },
       {
         title: "Teacher capacity building",
-        body: "Subject teachers trained and certified to run practicals confidently between our visits.",
+        body: "Subject teachers trained and certified to guide practical sessions confidently between our team's visits.",
       },
       {
         title: "Industry exposure visits",
-        body: "Structured plant and workshop visits with pre-reading and debrief, not a day out.",
+        body: "Structured plant and workshop tours paired with pre-reading and debriefs — turning field trips into genuine learning experiences.",
       },
     ],
     formats: ["Annual school partnership", "Cluster programmes", "Lab setup & handover"],
     outcomes: [
-      { stat: "240", label: "Partner schools" },
-      { stat: "31,000", label: "Students in labs" },
+      { stat: "240+", label: "Partner schools" },
+      { stat: "31,000+", label: "Students in labs" },
       { stat: "68%", label: "Report clearer career intent" },
     ],
     gallery: ["helmet-engine-lab", "safety-briefing", "engine-hands-on", "plumbing-workshop", "engine-briefing", "cnc-instruction"],
+    deliverLines: ["Practical career pathways built", "for school classrooms and labs."],
+    fieldLines: ["Real students.", "Real tools."],
   },
   {
     slug: "micro-entrepreneurship",
@@ -282,9 +296,9 @@ export const solutions: Solution[] = [
     title: "Micro-Entrepreneurship",
     short: "Micro-Entrepreneurship",
     summary:
-      "Enterprise skilling that turns a trade into a running, bankable business.",
+      "Empowering local communities and collectives to grow hands-on skills into real, income-generating enterprises.",
     lede:
-      "A tailoring certificate is not an income. We take trainees past the skill into pricing, sourcing, credit-readiness and their first ten customers — so the enterprise still exists a year later.",
+      "A tailoring certificate is not an income. We take trainees beyond the basic trade into real business skills — unit costing, raw material sourcing, credit access and finding their first ten customers — so the enterprise is still thriving a year later.",
     ctaLabel: "Open micro-entrepreneurship",
     hero: "tailoring-floor",
     accent: "cyan",
@@ -297,28 +311,30 @@ export const solutions: Solution[] = [
     offerings: [
       {
         title: "Trade + enterprise bundle",
-        body: "Tailoring, food processing, packaging or repair trades paired with unit costing, pricing and quality control.",
+        body: "Tailoring, food processing, packaging or repair trades paired directly with practical unit costing, clear pricing and quality control.",
       },
       {
         title: "Credit & scheme readiness",
-        body: "Documentation, bank linkage and scheme applications completed with the trainee, not explained at them.",
+        body: "Bank linkages, loan documentation and government scheme applications completed directly alongside the trainee — not just explained in a classroom.",
       },
       {
-        title: "Market linkage",
-        body: "Buyer introductions, aggregation support and packaging that survives a retail shelf.",
+        title: "Market linkage & sales",
+        body: "Buyer introductions, group aggregation support and product packaging built to hold up on a retail shelf.",
       },
       {
         title: "Twelve-month handholding",
-        body: "Quarterly mentor visits through the first year, when most micro-enterprises quietly fail.",
+        body: "Quarterly mentor visits throughout the critical first year — providing support right when most small businesses struggle.",
       },
     ],
     formats: ["Village & cluster cohorts", "SHG federation programmes", "Incubation with mentor visits"],
     outcomes: [
-      { stat: "5,400", label: "Enterprises started" },
+      { stat: "5,400+", label: "Enterprises started" },
       { stat: "71%", label: "Active after 12 months" },
       { stat: "2.3×", label: "Median income change" },
     ],
     gallery: ["tailoring-floor", "packaging-line", "tailoring-hands", "food-processing", "packaging-practical", "farm-implement"],
+    deliverLines: ["Practical enterprise building for", "lasting community livelihoods."],
+    fieldLines: ["Real local entrepreneurs.", "Real sustainable income."],
   },
 ];
 
@@ -330,26 +346,26 @@ export const solutionBySlug = (slug: string) => solutions.find((s) => s.slug ===
 export const method = [
   {
     step: "01",
-    title: "Diagnose the gap",
-    body: "We start with the work, not the syllabus — shadowing the bay, the shopfloor or the district labour market until we can name the specific competency that's missing.",
+    title: "Gap identification",
+    body: "We start by watching the work happen — observing the service bay, plant floor or local market to see where trainees get stuck.",
     photo: "engine-briefing" as PhotoKey,
   },
   {
     step: "02",
-    title: "Build the curriculum",
-    body: "Every module is written backwards from an observable outcome, mapped to NSQF levels and your own quality gates, with practicals weighted at 70% of contact hours.",
+    title: "Curriculum development",
+    body: "Every lesson starts with what a person needs to do on day one. Matched to national standards and your quality checks, with 70% pure hands-on practice.",
     photo: "cnc-instruction" as PhotoKey,
   },
   {
     step: "03",
-    title: "Deliver where the work is",
-    body: "Fixed centres, in-plant blocks or a mobile training unit parked at your gate. The trainee shouldn't have to travel to learn what they'll do on site.",
+    title: "Learning right at your door",
+    body: "From permanent centres and plant floors to mobile units parked right at your gate. People learn best where the actual work lives.",
     photo: "mobile-training-unit" as PhotoKey,
   },
   {
     step: "04",
-    title: "Assess and place",
-    body: "Third-party assessment, portable certification, then the part most providers skip: introductions, interviews and 90-day tracking into an actual job.",
+    title: "Assessment and placement",
+    body: "Independent testing and recognised certificates, followed by real introductions, job placements and 90 days of tracking on the job.",
     photo: "two-wheeler-lab" as PhotoKey,
   },
 ];
@@ -380,14 +396,14 @@ export const leadership: Leader[] = [
     slug: "founder",
     name: "Founder name",
     role: "Founder & Managing Director",
-    bio: "Sets what YandNow will and will not take on. Owns the partner relationships that turn a mandate into a funded programme, and holds the line on the four rules above when a client would rather we bent them.",
+    bio: "Sets what YandNow will and will not take on. Owns the partner relationships that turn a mandate into a funded programme, and holds the line on our core rules whenever a client requests a shortcut.",
     focus: ["Partnerships", "Programme strategy"],
   },
   {
     slug: "co-founder",
     name: "Co-founder name",
     role: "Co-founder & Director, Delivery",
-    bio: "Runs everything between the signed scope and the certificate — centres, mobile units, trainer bench and the assessment calendar. Accountable for the numbers we publish on the Impact page being the ones the field actually returned.",
+    bio: "Runs everything between the signed scope and the certificate — training centres, mobile units, the trainer bench and the assessment calendar. Accountable for ensuring the numbers published on our Impact page match what the field actually returned.",
     focus: ["Delivery & operations", "Trainer capability"],
   },
 ];
@@ -562,22 +578,22 @@ export const testimonials = [
 export const faqs = [
   {
     q: "How quickly can a programme start?",
-    a: "A scoped short module can be on the ground in three weeks. Multi-district CSR programmes typically need six to eight weeks for mobilisation, baseline and centre readiness.",
+    a: "A scoped short module can be operational on the ground in three weeks. Multi-district CSR initiatives typically require six to eight weeks for mobilisation, baseline surveys and training centre setup.",
   },
   {
     q: "Do you deliver at our site or yours?",
-    a: "Both. We run fixed centres, deploy mobile training units with live engine rigs, and run in-plant blocks inside partner facilities. Delivery mode is chosen by where the work actually is.",
+    a: "Both. We operate fixed centres, deploy mobile training units with live engine rigs, and run in-plant blocks inside partner facilities. The delivery mode is decided entirely by where the work actually happens.",
   },
   {
     q: "Which certifications do trainees receive?",
-    a: "NSQF-aligned certification through the relevant Sector Skill Council, with third-party assessment. Where a partner requires their own credential, we run both in parallel.",
+    a: "Graduates receive NSQF-aligned certification through the relevant Sector Skill Council via independent third-party assessment. Where partners require their own custom credential, we run both systems in parallel.",
   },
   {
     q: "How is impact measured?",
-    a: "Attendance and assessment data throughout, then placement verification at 90 days and a tracer study at 180. For enterprise programmes we track revenue and survival at 12 months.",
+    a: "We track attendance and assessment data during training, verify employment at 90 days, and conduct tracer studies at 180 days. For micro-entrepreneurship initiatives, we track active trading and revenue at 12 months.",
   },
   {
-    q: "Can you absorb an existing programme mid-cycle?",
-    a: "Yes. A significant share of our work is taking over stalled programmes — we audit what exists, retain what works and rebuild delivery around the remaining cohort.",
+    q: "Can you take over an existing programme mid-cycle?",
+    a: "Yes. A substantial portion of our work involves stepping in to rescue stalled programmes — we audit current progress, retain what works and restructure delivery around the remaining cohort.",
   },
 ];

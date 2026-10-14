@@ -29,14 +29,13 @@ export default function SolutionsScroller() {
             <MaskLines
               as="h2"
               className="display-lg mt-6 max-w-[20ch] font-semibold"
-              lines={["Six verticals,", "one delivery spine."]}
+              lines={["6 skillsets,", "1 core engine."]}
             />
           </div>
           <Reveal delay={0.12}>
             <p className="max-w-[40ch] text-[0.9375rem] leading-relaxed text-ink-50">
-              The audience changes. The method does not: diagnose the real gap, build
-              the curriculum backwards from it, deliver on live equipment, then verify
-              the outcome in the field.
+              Different sectors, yet one straight path to excellence. Map the need,
+              get hands-on training on the floor, and verify real-world results.
             </p>
           </Reveal>
         </div>
@@ -225,7 +224,7 @@ function Entry({
               </ul>
               <span className="mt-6 inline-flex items-center gap-2 text-[0.9375rem] font-medium text-indigo-brand">
                 <span className="relative">
-                  View this vertical
+                  Discover this vertical
                   <span className="absolute -bottom-[3px] left-0 h-px w-full origin-left scale-x-0 bg-indigo-brand transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-x-100" />
                 </span>
                 <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden className="transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-[3px] group-hover:-translate-y-[3px]">

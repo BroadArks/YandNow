@@ -20,12 +20,12 @@ export default function Faq({
       <div className="shell grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
         <div>
           <Reveal>
-            <p className="eyebrow text-indigo-brand">Common questions</p>
+            <p className="eyebrow text-indigo-brand">FAQ</p>
           </Reveal>
           <MaskLines
             as="h2"
             className="display-md mt-6 max-w-[14ch] font-semibold"
-            lines={["Before you", "ask us."]}
+            lines={["Answers before", "you ask."]}
           />
         </div>
 

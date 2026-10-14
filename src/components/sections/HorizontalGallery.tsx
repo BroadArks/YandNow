@@ -40,18 +40,17 @@ export default function HorizontalGallery() {
         <div className="grid gap-8 border-b border-line pb-12 lg:grid-cols-[1fr_auto] lg:items-end">
           <div>
             <Reveal>
-              <p className="eyebrow text-indigo-brand">In the field</p>
+              <p className="eyebrow text-indigo-brand">On the ground</p>
             </Reveal>
             <MaskLines
               as="h2"
               className="mt-6 max-w-[18ch] font-display text-[clamp(2.5rem,6.2vw,5.25rem)] leading-[0.96] font-semibold tracking-[-0.04em]"
-              lines={["Not stock photos.", "Our own cohorts."]}
+              lines={["Real people.", "Real shopfloors."]}
             />
           </div>
           <Reveal delay={0.1}>
             <p className="max-w-[34ch] text-[0.9375rem] leading-relaxed text-ink-50">
-              Every image on this site was taken on a live YandNow programme between
-              2020 and 2026.
+              Cohorts learning on live YandNow programmes between 2020 and 2026.
             </p>
           </Reveal>
         </div>

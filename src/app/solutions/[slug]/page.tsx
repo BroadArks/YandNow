@@ -91,7 +91,7 @@ export default async function SolutionPage({ params }: PageProps<"/solutions/[sl
           <MaskLines
             as="h2"
             className="display-md mt-6 max-w-[22ch] font-semibold"
-            lines={["The modules inside", "this vertical."]}
+            lines={s.deliverLines}
           />
 
           <ul className="mt-14 border-t border-line">
@@ -139,7 +139,7 @@ export default async function SolutionPage({ params }: PageProps<"/solutions/[sl
           <MaskLines
             as="h2"
             className="display-md mt-6 max-w-[20ch] font-semibold"
-            lines={["Photographed on", "live cohorts."]}
+            lines={s.fieldLines}
           />
 
           {/* Three columns, each photo at its own ratio. The stagger comes from
