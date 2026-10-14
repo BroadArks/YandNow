@@ -24,18 +24,18 @@ export default function Method() {
         <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
           <div>
             <Reveal>
-              <p className="eyebrow text-cyan-brand">The method</p>
+              <p className="eyebrow text-cyan-brand">Our process</p>
             </Reveal>
             <MaskLines
               as="h2"
               className="display-lg mt-6 max-w-[22ch] font-semibold"
-              lines={["How a programme", "actually gets built."]}
+              lines={["From initial map to real-world impact:", "how we build every programme."]}
             />
           </div>
           <Reveal delay={0.12}>
             <p className="max-w-[36ch] text-[0.9375rem] leading-relaxed text-white/55">
-              Four stages, run in order, every time — whether the client is an OEM
-              service network or a district livelihood mission.
+              A step-by-step framework built to deliver, whether we are
+              partner-building with an automotive OEM or a local livelihood team.
             </p>
           </Reveal>
         </div>

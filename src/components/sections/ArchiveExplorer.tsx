@@ -34,7 +34,7 @@ export default function ArchiveExplorer({ programmes }: { programmes: Programme[
             <MaskLines
               as="h2"
               className="display-lg mt-6 max-w-[18ch] font-semibold"
-              lines={["Filed by year,", "not by pitch."]}
+              lines={["Our ground record,", "year by year."]}
             />
           </div>
 

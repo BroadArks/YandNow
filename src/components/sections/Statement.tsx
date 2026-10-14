@@ -6,7 +6,7 @@ import { motion, useReducedMotion, useScroll, useTransform } from "motion/react"
 import ArrowLink from "@/components/ArrowLink";
 
 const TEXT =
-  "Most training ends at a certificate. Ours ends when someone can do the job unsupervised — because that is the only outcome an employer, a jawan, or a woman starting a workshop can actually use.";
+  "A certificate is nice, but working without supervision is better. We train until your people own their roles, delivering real value for everyone involved in the process.";
 
 /**
  * Scroll-scrubbed paragraph: each word lifts from faint to full ink as the
@@ -58,7 +58,7 @@ export default function Statement() {
                 href="/about"
                 className="group inline-flex items-center gap-3 rounded-full bg-ink px-6 py-3.5 font-medium text-paper-warm transition-colors duration-300 hover:bg-indigo-brand"
               >
-                How we work
+                Our approach
                 <svg
                   width="15"
                   height="15"
@@ -76,7 +76,7 @@ export default function Statement() {
                   />
                 </svg>
               </Link>
-              <ArrowLink href="/impact">Programme archive</ArrowLink>
+              <ArrowLink href="/solutions">Browse our programmes</ArrowLink>
             </div>
           </div>
         </div>

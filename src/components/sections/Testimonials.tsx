@@ -63,7 +63,7 @@ export default function Testimonials() {
         <MaskLines
           as="h2"
           className="display-md mt-6 max-w-[26ch] font-semibold"
-          lines={["Judged on delivery,", "not on the pitch."]}
+          lines={["Tested on site.", "Proven on the line."]}
         />
 
         <div className="mt-14 grid gap-10 border-t border-line pt-12 lg:grid-cols-[1fr_0.62fr] lg:gap-20">

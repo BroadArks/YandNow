@@ -10,7 +10,7 @@ export default function Metrics() {
           <div>
             <p className="eyebrow text-cyan-soft">By the numbers</p>
             <h2 className="display-md mt-6 max-w-[24ch] font-semibold">
-              Six years of delivery, counted honestly.
+              Six years. Clean execution. Uncompromising proof.
             </h2>
           </div>
           <p className="max-w-[38ch] text-[0.9375rem] leading-relaxed text-white/60">

@@ -23,58 +23,58 @@ export const metadata: Metadata = {
 
 const PRINCIPLES = [
   {
-    title: "Practicals are 70% of contact hours",
-    body: "A trade is muscle memory before it is theory. If a module cannot be demonstrated on equipment, it does not go into the curriculum.",
+    title: "Hands-on time comes first (70% minimum)",
+    body: "Reading about a machine isn't the same as running one. If a lesson can't be practised with real tools, it has no place in our classrooms.",
   },
   {
-    title: "Assessment is somebody else's job",
-    body: "We do not grade our own work. Every certification runs through an independent assessor, so the credential means something to an employer who has never heard of us.",
+    title: "We never grade our own learners",
+    body: "Self-marking is a conflict of interest. Independent, third-party examiners conduct every evaluation so our certificates carry genuine weight on the shopfloor.",
   },
   {
-    title: "Delivery travels to the cohort",
-    body: "Trainees drop out over bus fare far more often than over difficulty. Mobile units and in-plant blocks exist to remove that reason.",
+    title: "We bring the lab to the learner",
+    body: "Long commutes kill attendance faster than tough lessons. We pack up equipment and deploy directly inside plant bays, community centres and mobile units.",
   },
   {
-    title: "The outcome is a job, not a certificate",
-    body: "We track placement at 90 days and enterprise survival at 12 months, and we report what comes back — including the numbers we would rather not publish.",
+    title: "Proof means a paycheck, not a piece of paper",
+    body: "We track whether graduates are working at 90 days and whether small businesses are trading at 12 months. When numbers fall short, we show them anyway.",
   },
 ];
 
 const TIMELINE = [
   {
     year: "2020",
-    title: "First cohorts at CRISP, Bhopal",
-    body: "Plumbing, RAC and sheet-metal foundation courses run through the pandemic year, with Reliance Foundation support.",
+    title: "First cohorts in Bhopal",
+    body: "Launched foundation courses in plumbing, refrigeration/air conditioning (RAC) and sheet-metal trades through the pandemic year, backed by Reliance Foundation at CRISP, Bhopal.",
     photo: "plumbing-workshop" as const,
   },
   {
     year: "2021–22",
-    title: "Into machining and welding",
-    body: "CNC, welding and tractor-mechanic trades added with CRISP and GIZ — the start of our industrial workshop capability.",
+    title: "Expanding into industrial machining",
+    body: "Added CNC operation, heavy welding and tractor mechanics in partnership with CRISP and GIZ — establishing our core industrial shopfloor training capability.",
     photo: "cnc-operation" as const,
   },
   {
     year: "2022–23",
-    title: "Dealer networks and the North East",
-    body: "Automotive service training with ASDC, Veedol and IOCL across Indore and Pune, alongside enterprise programmes in Meghalaya.",
+    title: "Dealer networks & North East expansion",
+    body: "Rolled out automotive service training across Indore and Pune with ASDC, Veedol and IOCL, alongside rural micro-enterprise initiatives in Meghalaya.",
     photo: "car-lift-training" as const,
   },
   {
     year: "2023–24",
-    title: "Defence and healthcare",
-    body: "On-unit technical training for armed forces and CAPF personnel, and the first allied-healthcare cohorts.",
+    title: "Defence resettlement & healthcare trades",
+    body: "Introduced on-unit technical reskilling for military and CAPF personnel transitioning to civilian careers, and launched our first allied health technician cohorts.",
     photo: "defence-engine-class" as const,
   },
   {
     year: "2024–25",
-    title: "Training at your doorstep",
-    body: "Mobile training units commissioned at scale — live engine rigs driven into districts with demand but no infrastructure.",
+    title: "Training at your doorstep (mobile units)",
+    body: "Commissioned full-scale mobile workshops — driving live-engine rigs directly into districts lacking fixed training infrastructure.",
     photo: "mobile-training-unit" as const,
   },
   {
     year: "2025–26",
-    title: "Nineteen states",
-    body: "Corporate, CSR, industry, defence, school and micro-enterprise verticals all running concurrently across the country.",
+    title: "Pan-India multi-vertical engine",
+    body: "Operating all 6 verticals concurrently across 19 states — delivering hands-on training for corporate networks, CSR partners, industrial plants, defence units, schools and micro-entrepreneurs.",
     photo: "two-wheeler-lab" as const,
   },
 ];
@@ -83,9 +83,9 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About YandNow"
-        lines={["We are a training", "company, not a", "certificate mill."]}
-        lede="YandNow began in 2020 with a handful of foundation trades in Bhopal. 6 years on we run 6 verticals across 19 states — and the test has never changed: can the person we trained do the job on Monday without supervision?"
+        eyebrow="The YandNow story · Who we are"
+        lines={["Training is only as", "good as the work that", "happens after it."]}
+        lede="In 2020, we launched YandNow with a handful of practical trade classes in Bhopal. Today, we run 6 specialised verticals across 19 states. The locations changed, but the goal stayed identical: giving people the actual floor experience they need to perform confidently from day one."
         photo="welding-shopfloor"
         photoAlt="A welding workshop floor with equipment laid out and trainees at the benches"
         breadcrumb={[
@@ -93,7 +93,7 @@ export default function AboutPage() {
           { label: "About", href: "/about" },
         ]}
         meta={[
-          { label: "Founded", value: "2020" },
+          { label: "Day one", value: "2020" },
           { label: "Verticals", value: "06" },
           { label: "States covered", value: "19" },
         ]}
@@ -105,18 +105,18 @@ export default function AboutPage() {
           <div className="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-end">
             <div>
               <Reveal>
-                <p className="eyebrow text-indigo-brand">How we hold ourselves</p>
+                <p className="eyebrow text-indigo-brand">Non-negotiables</p>
               </Reveal>
               <MaskLines
                 as="h2"
                 className="display-lg mt-6 max-w-[20ch] font-semibold"
-                lines={["Four rules we", "do not bend."]}
+                lines={["Our", "non-negotiables."]}
               />
             </div>
             <Reveal delay={0.1}>
               <p className="max-w-[34ch] text-[0.9375rem] leading-relaxed text-ink-50">
-                They cost us work occasionally. They are also the reason partners hand
-                us second and third programmes.
+                We&apos;ve lost projects by sticking to these standards. We&apos;ve also
+                built six years of repeat client partnerships because of them.
               </p>
             </Reveal>
           </div>
@@ -167,7 +167,7 @@ export default function AboutPage() {
           <MaskLines
             as="h2"
             className="display-lg mt-6 max-w-[18ch] font-semibold"
-            lines={["Six years,", "in order."]}
+            lines={["Six years of ground", "execution, year by year."]}
           />
 
           <ol className="mt-16 border-t border-line">
@@ -213,28 +213,29 @@ export default function AboutPage() {
         <div className="shell grid gap-14 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div>
             <Reveal>
-              <p className="eyebrow text-indigo-brand">The people</p>
+              <p className="eyebrow text-indigo-brand">Our trainers</p>
             </Reveal>
             <MaskLines
               as="h2"
               className="display-md mt-6 max-w-[20ch] font-semibold"
-              lines={["Trainers who have", "done the job."]}
+              lines={["Instructors who have", "actually worked the floor."]}
             />
             <Reveal delay={0.12}>
               <p className="lede mt-7 max-w-[48ch]">
-                Our instructors come off shopfloors, service bays and labs, not out of
-                lecture halls. Every trainer holds a trade qualification, carries a
-                minimum of five years of site experience, and is re-assessed annually
-                on both craft and instruction.
+                Our trainers come straight from shopfloors, service bays and diagnostic
+                labs — not lecture halls. Every instructor holds certified trade
+                qualifications, brings at least five years of live site experience, and
+                undergoes annual re-assessments on both craft precision and teaching
+                skills.
               </p>
             </Reveal>
 
             <RevealGroup className="mt-11 grid gap-x-8 gap-y-7 sm:grid-cols-2" stagger={0.07}>
               {[
                 ["180+", "Certified trainers on roll"],
-                ["5 yrs", "Minimum floor experience"],
+                ["5 Yrs", "Minimum floor experience"],
                 ["Annual", "Re-assessment on craft"],
-                ["1:12", "Trainer to trainee ratio"],
+                ["1:12", "Trainer-to-trainee ratio"],
               ].map(([stat, label]) => (
                 <RevealItem key={label} y={16}>
                   <p className="font-display text-[1.75rem] leading-none font-semibold tracking-[-0.04em] text-indigo-brand tabular-nums">
@@ -269,7 +270,8 @@ export default function AboutPage() {
 
       <Leadership
         people={leadership}
-        intro="Two seats, both operational. Neither of us has an office we cannot be pulled out of when a programme needs a decision on the ground."
+        lines={["The people accountable", "for every cohort."]}
+        intro="Two operational seats, zero ivory towers. Neither of us sits behind a closed door when a field project needs an immediate decision on the ground."
       />
 
       <Faq items={faqs} />
