@@ -48,6 +48,11 @@ export default function ImpactPage() {
           <Reveal>
             <p className="eyebrow text-cyan-soft">Verified outcomes</p>
           </Reveal>
+          <MaskLines
+            as="h2"
+            className="display-md mt-6 max-w-[22ch] font-semibold"
+            lines={["Numbers backed by", "real-world verification."]}
+          />
           <div className="mt-12 grid grid-cols-2 gap-y-12 border-t border-white/15 pt-12 lg:grid-cols-4 lg:gap-x-8">
             {metrics.map((m, i) => (
               <Reveal key={m.label}>

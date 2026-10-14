@@ -33,9 +33,14 @@ export default function ArchiveExplorer({ programmes }: { programmes: Programme[
             </Reveal>
             <MaskLines
               as="h2"
-              className="display-lg mt-6 max-w-[18ch] font-semibold"
+              className="display-lg mt-6 max-w-[22ch] font-semibold"
               lines={["Our ground record,", "year by year."]}
             />
+            <Reveal delay={0.12}>
+              <p className="mt-6 max-w-[40ch] text-[0.9375rem] leading-relaxed text-ink-50">
+                Explore our ground execution filtered by industry vertical or year.
+              </p>
+            </Reveal>
           </div>
 
           {/* Filter chips */}

@@ -13,6 +13,7 @@ import {
   Reveal,
   RevealGroup,
   RevealItem,
+  ScaleInFrame,
 } from "@/components/motion-primitives";
 
 export const metadata: Metadata = {
@@ -37,6 +38,48 @@ const PRINCIPLES = [
   {
     title: "Proof means a paycheck, not a piece of paper",
     body: "We track whether graduates are working at 90 days and whether small businesses are trading at 12 months. When numbers fall short, we show them anyway.",
+  },
+];
+
+const EXECUTION = [
+  {
+    title: "Built around industry standards",
+    body: "We don't invent generic courses. We take your manuals, your audit standards and your machinery tolerances, then turn them into training modules.",
+  },
+  {
+    title: "Accountable to the end",
+    body: "From verifying employment at 90 days to checking micro-enterprises at 12 months, we stick around to ensure the learning actually takes root.",
+  },
+];
+
+// The About band words each headline figure for the story of the network,
+// rather than reusing the homepage's shorter notes.
+const METRIC_NOTES = [
+  "Practical trade skills across all 6 verticals",
+  "Permanent facilities, mobile units and on-site setups",
+  "Confirmed 90 days after certification",
+  "Grassroots and industrial footprints across India",
+];
+
+const TRAINER_STATS = [
+  ["180+", "Certified trainers on roll", "Full-time technical instructors deployed across India"],
+  ["5 Yrs", "Minimum floor experience", "Real-world site background required for every hire"],
+  ["Annual", "Re-assessment on craft", "Regular testing on both technical precision and instructional skill"],
+  ["1:12", "Trainer-to-trainee ratio", "Small cohort sizing for continuous hands-on guidance"],
+] as const;
+
+const TRAINER_HIGHLIGHTS = [
+  {
+    title: "Practitioners, not lecturers",
+    body: "Every trainer has spent years troubleshooting real machinery, managing live repair bays or operating plant floors.",
+  },
+  {
+    title: "Strict re-certification",
+    body: "Annual independent audits ensure trainers stay up to date with current OEM standards, new diagnostic tools and evolving safety protocols.",
+  },
+  {
+    title: "Dedicated attention",
+    body: "Low trainer-to-trainee ratios ensure every student gets direct supervision during 70% practical contact hours.",
   },
 ];
 
@@ -99,6 +142,97 @@ export default function AboutPage() {
         ]}
       />
 
+      {/* What drives us — the guiding principle, with the 70% figure pinned
+          to a photo that breathes as it scrolls into place */}
+      <section className="bg-paper py-24 md:py-32">
+        <div className="shell grid gap-12 lg:grid-cols-[auto_1fr] lg:gap-20">
+          <div className="lg:w-[13rem]">
+            <Reveal>
+              <p className="eyebrow text-indigo-brand">What drives us</p>
+            </Reveal>
+            <span className="mt-5 block h-px w-full bg-line" />
+          </div>
+
+          <div>
+            <MaskLines
+              as="h2"
+              className="display-lg max-w-[20ch] font-semibold"
+              lines={["Real confidence comes", "from handling real tools."]}
+            />
+            <Reveal delay={0.12}>
+              <p className="lede mt-8 max-w-[54ch] text-ink-70">
+                You can&apos;t learn diagnostics from a slide deck or welding from a
+                textbook. We spend 70% of every programme on live equipment, cutaway
+                engines and testing benches so trainees face real errors before they
+                step onto a customer site or factory line.
+              </p>
+            </Reveal>
+
+            <div className="relative mt-14">
+              <ScaleInFrame className="aspect-[4/3] w-full sm:aspect-[16/8]">
+                <Frame
+                  name="engine-hands-on"
+                  alt="Trainees working hands-on with a live engine on a training bench"
+                  className="h-full w-full"
+                  sizes="(min-width: 1024px) 60vw, 100vw"
+                />
+              </ScaleInFrame>
+              <Reveal
+                delay={0.2}
+                className="absolute bottom-0 left-0 bg-indigo-brand px-6 py-5 text-paper-warm md:px-8 md:py-6"
+              >
+                <Counter
+                  to={70}
+                  suffix="%"
+                  className="block font-display text-[clamp(2.25rem,4.4vw,3.5rem)] leading-none font-semibold tracking-[-0.045em] tabular-nums"
+                />
+                <p className="mt-2 max-w-[20ch] text-sm leading-snug text-white/70">
+                  of every programme spent on live equipment
+                </p>
+              </Reveal>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Execution model */}
+      <section className="bg-ink py-24 text-paper-warm md:py-32">
+        <div className="shell">
+          <Reveal>
+            <p className="eyebrow text-cyan-brand">Execution model</p>
+          </Reveal>
+          <MaskLines
+            as="h2"
+            className="display-lg mt-6 max-w-[20ch] font-semibold"
+            lines={["Designed for the field,", "not the auditorium."]}
+          />
+
+          <RevealGroup
+            className="mt-16 grid gap-px border border-white/15 bg-white/15 md:grid-cols-2"
+            stagger={0.08}
+          >
+            {EXECUTION.map((e, i) => (
+              <RevealItem key={e.title} className="group relative bg-ink p-8 md:p-12" y={18}>
+                {/* Hairline that draws across the top edge on hover */}
+                <span
+                  aria-hidden
+                  className="absolute inset-x-0 top-0 h-[2px] origin-left scale-x-0 bg-cyan-brand transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-x-100"
+                />
+                <span className="font-mono text-xs tracking-[0.16em] text-cyan-brand tabular-nums">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h3 className="mt-6 font-display text-[1.625rem] leading-[1.12] font-semibold tracking-[-0.032em] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-1 md:text-[2rem]">
+                  {e.title}
+                </h3>
+                <p className="mt-5 max-w-[46ch] text-[1.0625rem] leading-relaxed text-white/60">
+                  {e.body}
+                </p>
+              </RevealItem>
+            ))}
+          </RevealGroup>
+        </div>
+      </section>
+
       {/* Principles */}
       <section className="bg-paper-warm py-24 md:py-32">
         <div className="shell">
@@ -144,31 +278,49 @@ export default function AboutPage() {
 
       {/* Numbers band */}
       <section className="bg-indigo-brand py-20 text-paper-warm md:py-24">
-        <div className="shell grid grid-cols-2 gap-y-10 lg:grid-cols-4 lg:gap-x-8">
-          {metrics.map((m) => (
-            <Reveal key={m.label}>
-              <Counter
-                to={m.value}
-                suffix={m.suffix}
-                className="block font-display text-[clamp(2.25rem,4.4vw,3.5rem)] leading-none font-semibold tracking-[-0.045em] tabular-nums"
-              />
-              <p className="mt-3 text-[0.9375rem] font-medium">{m.label}</p>
-            </Reveal>
-          ))}
+        <div className="shell">
+          <Reveal>
+            <p className="eyebrow text-cyan-soft">Key metrics at a glance</p>
+          </Reveal>
+          <div className="mt-10 grid grid-cols-2 gap-y-10 border-t border-white/15 pt-10 lg:grid-cols-4 lg:gap-x-8">
+            {metrics.map((m, i) => (
+              <Reveal key={m.label}>
+                <Counter
+                  to={m.value}
+                  suffix={m.suffix}
+                  className="block font-display text-[clamp(2.25rem,4.4vw,3.5rem)] leading-none font-semibold tracking-[-0.045em] tabular-nums"
+                />
+                <p className="mt-3 text-[0.9375rem] font-medium">{m.label}</p>
+                <p className="mt-1.5 max-w-[24ch] text-sm leading-relaxed text-white/55">
+                  {METRIC_NOTES[i] ?? m.note}
+                </p>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Timeline */}
       <section className="bg-paper py-24 md:py-32">
         <div className="shell">
-          <Reveal>
-            <p className="eyebrow text-indigo-brand">Track record</p>
-          </Reveal>
-          <MaskLines
-            as="h2"
-            className="display-lg mt-6 max-w-[18ch] font-semibold"
-            lines={["Six years of ground", "execution, year by year."]}
-          />
+          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
+            <div>
+              <Reveal>
+                <p className="eyebrow text-indigo-brand">Track record</p>
+              </Reveal>
+              <MaskLines
+                as="h2"
+                className="display-lg mt-6 max-w-[18ch] font-semibold"
+                lines={["Six years of ground", "execution, year by year."]}
+              />
+            </div>
+            <Reveal delay={0.12}>
+              <p className="max-w-[34ch] text-[0.9375rem] leading-relaxed text-ink-50">
+                How a small trade setup in Bhopal grew into a 19-state hands-on
+                training engine.
+              </p>
+            </Reveal>
+          </div>
 
           <ol className="mt-16 border-t border-line">
             {TIMELINE.map((t, i) => (
@@ -231,17 +383,13 @@ export default function AboutPage() {
             </Reveal>
 
             <RevealGroup className="mt-11 grid gap-x-8 gap-y-7 sm:grid-cols-2" stagger={0.07}>
-              {[
-                ["180+", "Certified trainers on roll"],
-                ["5 Yrs", "Minimum floor experience"],
-                ["Annual", "Re-assessment on craft"],
-                ["1:12", "Trainer-to-trainee ratio"],
-              ].map(([stat, label]) => (
+              {TRAINER_STATS.map(([stat, label, note]) => (
                 <RevealItem key={label} y={16}>
                   <p className="font-display text-[1.75rem] leading-none font-semibold tracking-[-0.04em] text-indigo-brand tabular-nums">
                     {stat}
                   </p>
-                  <p className="mt-2 text-[0.9375rem] text-ink-50">{label}</p>
+                  <p className="mt-2 text-[0.9375rem] font-medium text-ink">{label}</p>
+                  <p className="mt-1 max-w-[28ch] text-sm leading-relaxed text-ink-50">{note}</p>
                 </RevealItem>
               ))}
             </RevealGroup>
@@ -265,6 +413,31 @@ export default function AboutPage() {
               />
             </Parallax>
           </div>
+        </div>
+
+        {/* Capability highlights */}
+        <div className="shell mt-20 md:mt-24">
+          <RevealGroup className="grid border-t border-line md:grid-cols-3" stagger={0.08}>
+            {TRAINER_HIGHLIGHTS.map((h, i) => (
+              <RevealItem
+                key={h.title}
+                y={18}
+                className="group relative border-b border-line py-9 md:border-b-0 md:py-10 md:pr-10 md:not-first:border-l md:not-first:pl-10"
+              >
+                <span
+                  aria-hidden
+                  className="absolute -top-px left-0 h-[2px] w-full origin-left scale-x-0 bg-indigo-brand transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-x-100"
+                />
+                <span className="font-mono text-xs tracking-[0.16em] text-indigo-brand tabular-nums">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h3 className="mt-5 font-display text-[1.375rem] leading-[1.18] font-semibold tracking-[-0.03em]">
+                  {h.title}
+                </h3>
+                <p className="mt-4 text-[1.0625rem] leading-relaxed text-ink-70">{h.body}</p>
+              </RevealItem>
+            ))}
+          </RevealGroup>
         </div>
       </section>
 
