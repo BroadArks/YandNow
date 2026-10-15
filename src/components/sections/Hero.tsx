@@ -97,7 +97,7 @@ export default function Hero() {
                 wrapper it resolves against the parent's 16px, not the lede's
                 own size, so the measure drifted wider as the font scaled up. */}
             <p className="lede hero-copy max-w-[58ch] text-white/85">
-              Hands-on training on live equipment in real time — built for
+              Hands-on training on live equipment in real time, built for
               operators, technicians and lab teams.
             </p>
 

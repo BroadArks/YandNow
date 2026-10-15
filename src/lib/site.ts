@@ -5,7 +5,7 @@ export const site = {
   legal: "YandNow Skill Development",
   tagline: "Skills that hold up on the floor.",
   description:
-    "YandNow builds workforce capability across six verticals — corporate, CSR, industry, defence, schools and micro-entrepreneurship — with hands-on training delivered at scale.",
+    "YandNow builds workforce capability across six verticals (corporate, CSR, industry, defence, schools and micro-entrepreneurship) with hands-on training delivered at scale.",
   email: "connect@yandnow.com",
   phone: "+91 98765 43210",
   address: ["YandNow Skill Development", "Bhopal · Pune · Guwahati", "India"],
@@ -72,7 +72,7 @@ export const solutions: Solution[] = [
     summary:
       "Sharpening technical know-how and floor discipline for service networks, dealer technicians and frontline crews.",
     lede:
-      "Your technicians are the product experience. We build hands-on training around your exact service manuals, diagnostic tools and quality standards — running cohorts across your dealer network until every floor operates with confidence.",
+      "Your technicians are the product experience. We build hands-on training around your exact service manuals, diagnostic tools and quality standards, running cohorts across your dealer network until every floor operates with confidence.",
     ctaLabel: "Open corporate training",
     hero: "engine-cohort",
     accent: "indigo",
@@ -89,7 +89,7 @@ export const solutions: Solution[] = [
       },
       {
         title: "Diagnostics & electronics",
-        body: "Scan-tool workflows, sensor logic and step-by-step fault-tree reasoning — practised on instrumented benches wired to real ECUs.",
+        body: "Scan-tool workflows, sensor logic and step-by-step fault-tree reasoning, practised on instrumented benches wired to real ECUs.",
       },
       {
         title: "Train-the-trainer",
@@ -97,7 +97,7 @@ export const solutions: Solution[] = [
       },
       {
         title: "Service excellence & floor discipline",
-        body: "Bay organisation, clean customer handovers and accurate documentation standards — benchmarked directly against your internal audit scores.",
+        body: "Bay organisation, clean customer handovers and accurate documentation standards, benchmarked directly against your internal audit scores.",
       },
     ],
     formats: ["On-site at your plant or dealership", "Mobile training unit at your gate", "Blended: short digital theory + practical floor blocks"],
@@ -120,7 +120,7 @@ export const solutions: Solution[] = [
     summary:
       "Deploying CSR funds directly where training happens, with full tracking and bulletproof data.",
     lede:
-      "CSR succeeds when it reaches the last mile. Great intent needs grounded execution. We handle every step — mobilisation, hands-on training, certification, real placement and the transparent data trail your board and auditors require.",
+      "CSR succeeds when it reaches the last mile. Great intent needs grounded execution. We handle every step: mobilisation, hands-on training, certification, real placement and the transparent data trail your board and auditors require.",
     ctaLabel: "Open CSR programmes",
     hero: "medical-camp",
     accent: "cyan",
@@ -133,7 +133,7 @@ export const solutions: Solution[] = [
     offerings: [
       {
         title: "Livelihood skilling",
-        body: "Job-linked training selected directly from local labour demand data — focusing on skills that actually lead to work, not just what is easy to run.",
+        body: "Job-linked training selected directly from local labour demand data, focusing on skills that actually lead to work, not just what is easy to run.",
       },
       {
         title: "Community health camps",
@@ -168,7 +168,7 @@ export const solutions: Solution[] = [
     summary:
       "Hands-on skill building across welding, machining and site safety. Getting workforce operators shopfloor-ready from day one.",
     lede:
-      "A weld either holds or it doesn't. Industrial trades are tested on site, not in theory. We teach on production-grade machinery built to the exact same tolerances as the plants our trainees join — so every worker hits the shopfloor fully ready.",
+      "A weld either holds or it doesn't. Industrial trades are tested on site, not in theory. We teach on production-grade machinery built to the exact same tolerances as the plants our trainees join, so every worker hits the shopfloor fully ready.",
     ctaLabel: "Open industry solutions",
     hero: "welding-sparks",
     accent: "indigo",
@@ -181,11 +181,11 @@ export const solutions: Solution[] = [
     offerings: [
       {
         title: "Welding & fabrication",
-        body: "SMAW, MIG and TIG techniques combined with weld-inspection theory — graded directly on visual and bend testing rather than simple attendance.",
+        body: "SMAW, MIG and TIG techniques combined with weld-inspection theory, graded directly on visual and bend testing rather than simple attendance.",
       },
       {
         title: "CNC & machining",
-        body: "Turning, milling and CNC programming on production-spec equipment — covering offsets, setup, tooling and first-article inspection.",
+        body: "Turning, milling and CNC programming on production-spec equipment, covering offsets, setup, tooling and first-article inspection.",
       },
       {
         title: "Electrical & instrumentation",
@@ -193,7 +193,7 @@ export const solutions: Solution[] = [
       },
       {
         title: "Safety & compliance",
-        body: "Work-at-height, confined space protocols, PPE regimes and daily toolbox talks — mapped directly to your internal HSE framework.",
+        body: "Work-at-height, confined space protocols, PPE regimes and daily toolbox talks, mapped directly to your internal HSE framework.",
       },
     ],
     formats: ["Centre-based long-term courses", "In-plant short modules", "Assessment & certification only"],
@@ -237,7 +237,7 @@ export const solutions: Solution[] = [
       },
       {
         title: "On-unit delivery",
-        body: "Training brought directly to your station or garrison — eliminating personnel movement and keeping unit routine undisturbed.",
+        body: "Training brought directly to your station or garrison, eliminating personnel movement and keeping unit routine undisturbed.",
       },
       {
         title: "Second-career placement",
@@ -264,7 +264,7 @@ export const solutions: Solution[] = [
     summary:
       "Bridging classroom learning with real-world skills through practical career labs for Classes 9 to 12.",
     lede:
-      "Most students pick careers from a list of four jobs they've heard of. We put real tools in their hands early — so career choices are driven by practical experience rather than hearsay.",
+      "Most students pick careers from a list of four jobs they've heard of. We put real tools in their hands early, so career choices are driven by practical experience rather than hearsay.",
     ctaLabel: "Open school solutions",
     hero: "sheet-metal-bench",
     accent: "indigo",
@@ -277,7 +277,7 @@ export const solutions: Solution[] = [
     offerings: [
       {
         title: "NSQF vocational electives",
-        body: "Board-aligned trade subjects delivered with complete practical support — equipment, consumables and instructors fully included.",
+        body: "Board-aligned trade subjects delivered with complete practical support: equipment, consumables and instructors fully included.",
       },
       {
         title: "Career discovery labs",
@@ -289,7 +289,7 @@ export const solutions: Solution[] = [
       },
       {
         title: "Industry exposure visits",
-        body: "Structured plant and workshop tours paired with pre-reading and debriefs — turning field trips into genuine learning experiences.",
+        body: "Structured plant and workshop tours paired with pre-reading and debriefs, turning field trips into genuine learning experiences.",
       },
     ],
     formats: ["Annual school partnership", "Cluster programmes", "Lab setup & handover"],
@@ -312,7 +312,7 @@ export const solutions: Solution[] = [
     summary:
       "Empowering local communities and collectives to grow hands-on skills into real, income-generating enterprises.",
     lede:
-      "A tailoring certificate is not an income. We take trainees beyond the basic trade into real business skills — unit costing, raw material sourcing, credit access and finding their first ten customers — so the enterprise is still thriving a year later.",
+      "A tailoring certificate is not an income. We take trainees beyond the basic trade into real business skills (unit costing, raw material sourcing, credit access and finding their first ten customers) so the enterprise is still thriving a year later.",
     ctaLabel: "Open micro-entrepreneurship",
     hero: "tailoring-floor",
     accent: "cyan",
@@ -329,7 +329,7 @@ export const solutions: Solution[] = [
       },
       {
         title: "Credit & scheme readiness",
-        body: "Bank linkages, loan documentation and government scheme applications completed directly alongside the trainee — not just explained in a classroom.",
+        body: "Bank linkages, loan documentation and government scheme applications completed directly alongside the trainee, not just explained in a classroom.",
       },
       {
         title: "Market linkage & sales",
@@ -337,7 +337,7 @@ export const solutions: Solution[] = [
       },
       {
         title: "Twelve-month handholding",
-        body: "Quarterly mentor visits throughout the critical first year — providing support right when most small businesses struggle.",
+        body: "Quarterly mentor visits throughout the critical first year, providing support right when most small businesses struggle.",
       },
     ],
     formats: ["Village & cluster cohorts", "SHG federation programmes", "Incubation with mentor visits"],
@@ -363,7 +363,7 @@ export const method = [
   {
     step: "01",
     title: "Gap identification",
-    body: "We start by watching the work happen — observing the service bay, plant floor or local market to see where trainees get stuck.",
+    body: "We start by watching the work happen, observing the service bay, plant floor or local market to see where trainees get stuck.",
     photo: "engine-briefing" as PhotoKey,
   },
   {
@@ -419,7 +419,7 @@ export const leadership: Leader[] = [
     slug: "co-founder",
     name: "Co-founder name",
     role: "Co-founder & Director, Delivery",
-    bio: "Runs everything between the signed scope and the certificate — training centres, mobile units, the trainer bench and the assessment calendar. Accountable for ensuring the numbers published on our Impact page match what the field actually returned.",
+    bio: "Runs everything between the signed scope and the certificate: training centres, mobile units, the trainer bench and the assessment calendar. Accountable for ensuring the numbers published on our Impact page match what the field actually returned.",
     focus: ["Delivery & operations", "Trainer capability"],
   },
 ];
@@ -494,7 +494,7 @@ export const programmes: Programme[] = [
   },
   {
     year: "2024–25",
-    title: "Training at your doorstep — mobile HCV programme",
+    title: "Training at your doorstep: mobile HCV programme",
     partner: "TotalEnergies · Ashok Leyland",
     vertical: "Corporate",
     place: "Telangana · Andhra Pradesh",
@@ -579,7 +579,7 @@ export const testimonials = [
   },
   {
     quote:
-      "The reporting was the surprise. Geo-tagged attendance, third-party assessment, tracer study at 180 days — our auditors had nothing to ask for.",
+      "The reporting was the surprise. Geo-tagged attendance, third-party assessment, tracer study at 180 days. Our auditors had nothing to ask for.",
     name: "CSR Lead",
     org: "Energy major",
   },
@@ -610,6 +610,6 @@ export const faqs = [
   },
   {
     q: "Can you take over an existing programme mid-cycle?",
-    a: "Yes. A substantial portion of our work involves stepping in to rescue stalled programmes — we audit current progress, retain what works and restructure delivery around the remaining cohort.",
+    a: "Yes. A substantial portion of our work involves stepping in to rescue stalled programmes. We audit current progress, retain what works and restructure delivery around the remaining cohort.",
   },
 ];

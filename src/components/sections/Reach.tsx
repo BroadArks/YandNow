@@ -92,7 +92,7 @@ export default function Reach() {
               <p className="mt-3 text-[0.9375rem] font-medium">Mobile training units</p>
               <p className="mt-1.5 text-sm leading-relaxed text-white/50">
                 Each fitted with a live engine rig, diagnostic bench and seating for
-                sixteen — commissioned, maintained and staffed by us.
+                sixteen. Commissioned, maintained and staffed by us.
               </p>
             </div>
           </Reveal>

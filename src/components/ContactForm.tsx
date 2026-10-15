@@ -35,15 +35,15 @@ export default function ContactForm({ verticals }: { verticals: string[] }) {
       `Name: ${data.get("name")}`,
       `Organisation: ${data.get("org")}`,
       `Email: ${data.get("email")}`,
-      `Phone: ${data.get("phone") || "—"}`,
+      `Phone: ${data.get("phone") || "Not given"}`,
       `Vertical: ${data.get("vertical")}`,
-      `Cohort size: ${data.get("size") || "—"}`,
+      `Cohort size: ${data.get("size") || "Not given"}`,
       "",
       String(data.get("message") ?? ""),
     ].join("\n");
 
     const href = `mailto:connect@yandnow.com?subject=${encodeURIComponent(
-      `Programme enquiry — ${data.get("org") || data.get("name")}`,
+      `Programme enquiry: ${data.get("org") || data.get("name")}`,
     )}&body=${encodeURIComponent(body)}`;
 
     window.location.href = href;
@@ -187,7 +187,7 @@ function Field({
           required={required}
           rows={5}
           className={`${shared} resize-y`}
-          placeholder="A short description is enough — trade, numbers, location, timing."
+          placeholder="A short description is enough: trade, numbers, location, timing."
         />
       ) : (
         <input

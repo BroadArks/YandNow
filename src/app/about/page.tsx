@@ -19,7 +19,7 @@ import {
 export const metadata: Metadata = {
   title: "About",
   description:
-    "YandNow is a skill development organisation delivering hands-on technical training across India — six verticals, nineteen states, fixed and mobile centres.",
+    "YandNow is a skill development organisation delivering hands-on technical training across India: six verticals, nineteen states, fixed and mobile centres.",
 };
 
 const PRINCIPLES = [
@@ -93,7 +93,7 @@ const TIMELINE = [
   {
     year: "2021–22",
     title: "Expanding into industrial machining",
-    body: "Added CNC operation, heavy welding and tractor mechanics in partnership with CRISP and GIZ — establishing our core industrial shopfloor training capability.",
+    body: "Added CNC operation, heavy welding and tractor mechanics in partnership with CRISP and GIZ, establishing our core industrial shopfloor training capability.",
     photo: "cnc-operation" as const,
   },
   {
@@ -111,13 +111,13 @@ const TIMELINE = [
   {
     year: "2024–25",
     title: "Training at your doorstep (mobile units)",
-    body: "Commissioned full-scale mobile workshops — driving live-engine rigs directly into districts lacking fixed training infrastructure.",
+    body: "Commissioned full-scale mobile workshops, driving live-engine rigs directly into districts lacking fixed training infrastructure.",
     photo: "mobile-training-unit" as const,
   },
   {
     year: "2025–26",
     title: "Pan-India multi-vertical engine",
-    body: "Operating all 6 verticals concurrently across 19 states — delivering hands-on training for corporate networks, CSR partners, industrial plants, defence units, schools and micro-entrepreneurs.",
+    body: "Operating all 6 verticals concurrently across 19 states, delivering hands-on training for corporate networks, CSR partners, industrial plants, defence units, schools and micro-entrepreneurs.",
     photo: "two-wheeler-lab" as const,
   },
 ];
@@ -375,7 +375,7 @@ export default function AboutPage() {
             <Reveal delay={0.12}>
               <p className="lede mt-7 max-w-[48ch]">
                 Our trainers come straight from shopfloors, service bays and diagnostic
-                labs — not lecture halls. Every instructor holds certified trade
+                labs, not lecture halls. Every instructor holds certified trade
                 qualifications, brings at least five years of live site experience, and
                 undergoes annual re-assessments on both craft precision and teaching
                 skills.

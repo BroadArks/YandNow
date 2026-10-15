@@ -24,7 +24,7 @@ export default function SolutionsPage() {
       <PageHero
         eyebrow="Solutions"
         lines={["Six ways we", "build capability."]}
-        lede="One delivery spine, six audiences. Pick the vertical that matches your mandate — or tell us the outcome and we will tell you which one it belongs in."
+        lede="One delivery spine, six audiences. Pick the vertical that matches your mandate, or tell us the outcome and we will tell you which one it belongs in."
         photo="engine-cohort"
         photoAlt="A cohort of technicians gathered around a heavy-vehicle engine on a training stand"
         breadcrumb={[

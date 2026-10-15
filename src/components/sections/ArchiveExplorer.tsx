@@ -160,7 +160,7 @@ export default function ArchiveExplorer({ programmes }: { programmes: Programme[
                                 <Frame
                                   key={ph}
                                   name={ph}
-                                  alt={`${p.title} — ${p.partner}`}
+                                  alt={`${p.title}, ${p.partner}`}
                                   className="aspect-[4/3] w-full"
                                   sizes="(min-width: 640px) 28vw, 100vw"
                                 />
