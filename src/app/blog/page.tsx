@@ -28,10 +28,6 @@ export default async function BlogPage() {
           { label: "Home", href: "/" },
           { label: "Blog", href: "/blog" },
         ]}
-        meta={[
-          { label: "Articles", value: String(posts.length) },
-          { label: "Topics", value: String(new Set(posts.map((p) => p.category)).size) },
-        ]}
       />
       <BlogIndex posts={posts} />
     </>
