@@ -6,7 +6,7 @@ import { motion, useReducedMotion, useScroll, useTransform } from "motion/react"
 import ArrowLink from "@/components/ArrowLink";
 
 const TEXT =
-  "A certificate is nice, but working without supervision is better. We train until your people own their roles, delivering real value for everyone involved in the process.";
+  "Certificates that validate the experience. We train until your people own their roles, delivering real value for everyone involved in the process.";
 
 /**
  * Scroll-scrubbed paragraph: each word lifts from faint to full ink as the

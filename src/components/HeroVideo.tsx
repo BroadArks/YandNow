@@ -167,7 +167,7 @@ export default function HeroVideo({
             </svg>
           )}
           <span className="eyebrow sr-only md:not-sr-only">
-            {playing ? "Pause footage" : "Play footage"}
+            {playing ? "Pause" : "Play"}
           </span>
         </motion.button>
       )}
