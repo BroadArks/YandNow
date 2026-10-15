@@ -248,8 +248,8 @@ export default function AboutPage() {
             </div>
             <Reveal delay={0.1}>
               <p className="max-w-[34ch] text-[0.9375rem] leading-relaxed text-ink-50">
-                We&apos;ve lost projects by sticking to these standards. We&apos;ve also
-                built six years of repeat client partnerships because of them.
+                We only run programmes that meet these four standards, ensuring our
+                delivery remains honest, rigorous, and accountable from day one.
               </p>
             </Reveal>
           </div>
