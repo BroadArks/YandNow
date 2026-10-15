@@ -150,7 +150,7 @@ export default function SolutionsPage() {
                 </h3>
                 {/* Drawn in from the left on hover — the whole micro-interaction. */}
                 <span className="mt-3 block h-[2px] w-8 origin-left scale-x-0 bg-cyan-brand transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/cap:scale-x-100" />
-                <p className="mt-3 text-[0.9375rem] leading-relaxed text-white/55 transition-colors duration-500 group-hover/cap:text-white/75">
+                <p className="mt-3 text-[0.9375rem] leading-relaxed text-white/65 transition-colors duration-500 group-hover/cap:text-white/75">
                   {body}
                 </p>
               </RevealItem>

@@ -290,7 +290,7 @@ export default function AboutPage() {
                   className="block font-display text-[clamp(2.25rem,4.4vw,3.5rem)] leading-none font-semibold tracking-[-0.045em] tabular-nums"
                 />
                 <p className="mt-3 text-[0.9375rem] font-medium">{m.label}</p>
-                <p className="mt-1.5 max-w-[24ch] text-sm leading-relaxed text-white/55">
+                <p className="mt-1.5 max-w-[24ch] text-sm leading-relaxed text-white/65">
                   {METRIC_NOTES[i] ?? m.note}
                 </p>
               </Reveal>

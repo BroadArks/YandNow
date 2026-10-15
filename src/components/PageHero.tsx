@@ -32,10 +32,10 @@ export default function PageHero({
             <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2">
               {breadcrumb.map((b, i) => (
                 <span key={b.href} className="flex items-center gap-2">
-                  {i > 0 && <span className="text-white/25">/</span>}
+                  {i > 0 && <span className="text-white/45">/</span>}
                   <Link
                     href={b.href}
-                    className="eyebrow text-white/40 transition-colors hover:text-cyan-brand"
+                    className="eyebrow text-white/60 transition-colors hover:text-cyan-brand"
                   >
                     {b.label}
                   </Link>
@@ -84,7 +84,7 @@ export default function PageHero({
                         >
                           {isFigure ? <StatNumber value={m.value} /> : m.value}
                         </dd>
-                        <dt className="mt-3 max-w-[22ch] text-[0.9375rem] leading-snug text-white/55">
+                        <dt className="mt-3 max-w-[22ch] text-[0.9375rem] leading-snug text-white/65">
                           {m.label}
                         </dt>
                       </div>

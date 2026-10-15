@@ -40,7 +40,7 @@ export default function Footer() {
                 </Link>
                 <a
                   href={`mailto:${site.email}`}
-                  className="font-mono text-[0.8125rem] tracking-[0.12em] text-white/50 uppercase underline decoration-white/20 decoration-1 underline-offset-[6px] transition-colors hover:text-white hover:decoration-cyan-brand"
+                  className="font-mono text-[0.8125rem] tracking-[0.12em] text-white/65 uppercase underline decoration-white/20 decoration-1 underline-offset-[6px] transition-colors hover:text-white hover:decoration-cyan-brand"
                 >
                   {site.email}
                 </a>
@@ -51,7 +51,7 @@ export default function Footer() {
           <Reveal delay={0.1} className="lg:pt-4">
             <dl className="grid grid-cols-2 gap-x-8 gap-y-9 sm:grid-cols-2">
               <div>
-                <dt className="eyebrow text-white/35">Reach us</dt>
+                <dt className="eyebrow text-white/55">Reach us</dt>
                 <dd className="mt-3 space-y-1 text-[0.9375rem] text-white/70">
                   <a href={`tel:${site.phone.replace(/\s/g, "")}`} className="block transition-colors hover:text-cyan-brand">
                     {site.phone}
@@ -62,7 +62,7 @@ export default function Footer() {
                 </dd>
               </div>
               <div>
-                <dt className="eyebrow text-white/35">Offices</dt>
+                <dt className="eyebrow text-white/55">Offices</dt>
                 <dd className="mt-3 space-y-1 text-[0.9375rem] text-white/70">
                   {site.address.map((l) => (
                     <span key={l} className="block">
@@ -72,7 +72,7 @@ export default function Footer() {
                 </dd>
               </div>
               <div>
-                <dt className="eyebrow text-white/35">Follow</dt>
+                <dt className="eyebrow text-white/55">Follow</dt>
                 <dd className="mt-3 space-y-1.5 text-[0.9375rem]">
                   {site.social.map((s) => (
                     <ArrowLink key={s.label} href={s.href} tone="light">
@@ -82,7 +82,7 @@ export default function Footer() {
                 </dd>
               </div>
               <div>
-                <dt className="eyebrow text-white/35">Hours</dt>
+                <dt className="eyebrow text-white/55">Hours</dt>
                 <dd className="mt-3 text-[0.9375rem] text-white/70">
                   Mon – Sat
                   <br />
@@ -98,13 +98,13 @@ export default function Footer() {
       <div className="shell grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <Logo tone="grey" className="h-7" />
-          <p className="mt-4 max-w-[30ch] text-sm leading-relaxed text-white/45">
+          <p className="mt-4 max-w-[30ch] text-sm leading-relaxed text-white/60">
             {site.tagline} Workforce capability built where the work happens.
           </p>
         </div>
 
         <div>
-          <p className="eyebrow text-white/35">Solutions</p>
+          <p className="eyebrow text-white/55">Solutions</p>
           <ul className="mt-4 space-y-2">
             {solutions.map((s) => (
               <li key={s.slug}>
@@ -120,7 +120,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="eyebrow text-white/35">Company</p>
+          <p className="eyebrow text-white/55">Company</p>
           <ul className="mt-4 space-y-2">
             {nav.map((n) => (
               <li key={n.href}>
@@ -136,7 +136,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col justify-between gap-6">
-          <p className="font-mono text-[0.8125rem] leading-relaxed tracking-[0.1em] text-white/30 uppercase">
+          <p className="font-mono text-[0.8125rem] leading-relaxed tracking-[0.1em] text-white/50 uppercase">
             NSQF-aligned delivery
             <br />
             ISO 9001:2015 processes
@@ -145,10 +145,10 @@ export default function Footer() {
       </div>
 
       <div className="shell flex flex-col gap-3 border-t border-white/10 py-6 sm:flex-row sm:items-center sm:justify-between">
-        <p className="font-mono text-[0.8125rem] tracking-[0.1em] text-white/30 uppercase">
+        <p className="font-mono text-[0.8125rem] tracking-[0.1em] text-white/50 uppercase">
           © {year} {site.legal}
         </p>
-        <p className="font-mono text-[0.8125rem] tracking-[0.1em] text-white/30 uppercase">
+        <p className="font-mono text-[0.8125rem] tracking-[0.1em] text-white/50 uppercase">
           Photography from live programmes, 2020–2026
         </p>
       </div>

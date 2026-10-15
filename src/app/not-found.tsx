@@ -23,7 +23,7 @@ export default function NotFound() {
                   href={`/solutions/${s.slug}`}
                   className="group flex items-baseline gap-3 py-1 text-[0.9375rem] text-white/65 transition-colors duration-300 hover:text-cyan-brand"
                 >
-                  <span className="font-mono text-[0.8125rem] tracking-[0.14em] text-white/30 tabular-nums">
+                  <span className="font-mono text-[0.8125rem] tracking-[0.14em] text-white/50 tabular-nums">
                     {s.index}
                   </span>
                   {s.short}

@@ -33,7 +33,7 @@ export default function Method() {
             />
           </div>
           <Reveal delay={0.12}>
-            <p className="max-w-[36ch] text-[0.9375rem] leading-relaxed text-white/55">
+            <p className="max-w-[36ch] text-[0.9375rem] leading-relaxed text-white/65">
               A step-by-step framework built to deliver, whether we are
               partner-building with an automotive OEM or a local livelihood team.
             </p>

@@ -283,7 +283,7 @@ export default function Nav() {
                 </Link>
                 <a
                   href={`mailto:${site.email}`}
-                  className="mt-5 block font-mono text-[0.8125rem] tracking-[0.1em] text-white/50 uppercase"
+                  className="mt-5 block font-mono text-[0.8125rem] tracking-[0.1em] text-white/65 uppercase"
                 >
                   {site.email}
                 </a>
