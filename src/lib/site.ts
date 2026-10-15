@@ -409,7 +409,7 @@ export const leadership: Leader[] = [
   {
     slug: "pankaj-dutta",
     name: "Mr. Pankaj Dutta",
-    role: "Founder & Managing Director",
+    role: "Co-founder",
     bio: "Sets what YandNow will and will not take on. Owns the partner relationships that turn a mandate into a funded programme, and holds the line on our core rules whenever a client requests a shortcut.",
     focus: ["Partnerships", "Programme strategy"],
     photo: "/team/pankaj-dutta.webp",
@@ -417,7 +417,7 @@ export const leadership: Leader[] = [
   {
     slug: "kaveri-dutta",
     name: "Dr. Kaveri Dutta",
-    role: "Co-founder & Director, Delivery",
+    role: "Co-founder",
     bio: "Runs everything between the signed scope and the certificate: training centres, mobile units, the trainer bench and the assessment calendar. Accountable for ensuring the numbers published on our Impact page match what the field actually returned.",
     focus: ["Delivery & operations", "Trainer capability"],
     photo: "/team/kaveri-dutta.webp",
