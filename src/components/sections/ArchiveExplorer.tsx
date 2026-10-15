@@ -26,18 +26,21 @@ export default function ArchiveExplorer({ programmes }: { programmes: Programme[
   return (
     <section className="bg-paper-warm py-24 md:py-32">
       <div className="shell">
-        <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
+        {/* Headline runs full width so each line stays whole; the sub-text
+            and filters share the row beneath it. */}
+        <Reveal>
+          <p className="eyebrow text-indigo-brand">The archive</p>
+        </Reveal>
+        <MaskLines
+          as="h2"
+          className="display-lg mt-6 font-semibold"
+          lineClassName="sm:whitespace-nowrap"
+          lines={["Our ground record,", "year by year."]}
+        />
+        <div className="mt-6 grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
           <div>
-            <Reveal>
-              <p className="eyebrow text-indigo-brand">The archive</p>
-            </Reveal>
-            <MaskLines
-              as="h2"
-              className="display-lg mt-6 max-w-[22ch] font-semibold"
-              lines={["Our ground record,", "year by year."]}
-            />
             <Reveal delay={0.12}>
-              <p className="mt-6 max-w-[40ch] text-[0.9375rem] leading-relaxed text-ink-50">
+              <p className="max-w-[40ch] text-[0.9375rem] leading-relaxed text-ink-50">
                 Explore our ground execution filtered by industry vertical or year.
               </p>
             </Reveal>
@@ -158,6 +161,7 @@ export default function ArchiveExplorer({ programmes }: { programmes: Programme[
                             >
                               {p.photos.map((ph) => (
                                 <Frame
+                                  aura={false}
                                   key={ph}
                                   name={ph}
                                   alt={`${p.title}, ${p.partner}`}

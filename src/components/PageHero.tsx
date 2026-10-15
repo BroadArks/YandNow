@@ -15,6 +15,7 @@ export default function PageHero({
   photoAlt,
   breadcrumb,
   meta,
+  aura = true,
 }: {
   eyebrow: string;
   lines: string[];
@@ -23,6 +24,7 @@ export default function PageHero({
   photoAlt: string;
   breadcrumb?: { label: string; href: string }[];
   meta?: { label: string; value: string }[];
+  aura?: boolean;
 }) {
   return (
     <section className="relative overflow-hidden bg-indigo-ink text-paper-warm">
@@ -97,6 +99,7 @@ export default function PageHero({
 
           <Reveal delay={0.1} y={30}>
             <Frame
+              aura={aura}
               name={photo}
               alt={photoAlt}
               className="aspect-[4/3] w-full"
