@@ -48,6 +48,7 @@ const NAMES = {
   "indian-oil": "Indian Oil",
   jaquar: "Jaquar",
   jsw: "JSW",
+  nabard: "NABARD",
   mssds: "Meghalaya State Skill Development Society",
   "north-eastern-council": "North Eastern Council",
   nsdc: "National Skill Development Corporation",

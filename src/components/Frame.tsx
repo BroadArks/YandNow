@@ -4,7 +4,7 @@ import { photos, type PhotoKey } from "@/lib/photos";
 /**
  * Every photo on the site goes through here: blur placeholder from the build
  * manifest, correct intrinsic size, and a hairline that keeps light images
- * from bleeding into the paper background.
+ * from bleeding into the paper background, over a soft drifting brand aura.
  */
 export default function Frame({
   name,
@@ -39,24 +39,34 @@ export default function Frame({
   const p = photos[name];
 
   return (
-    <div className={`relative overflow-hidden bg-ink/[0.04] ${className ?? ""}`}>
-      <Image
-        src={p.src}
-        alt={alt}
-        width={p.w}
-        height={p.h}
-        placeholder="blur"
-        blurDataURL={p.blur}
-        sizes={sizes}
-        priority={priority}
-        quality={quality}
-        className={`w-full ${
-          fit === "cover" ? "h-full object-cover" : "h-auto"
-        } ${imgClassName ?? ""}`}
-      />
-      {ring && (
-        <span className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-ink/10" />
-      )}
+    // The outer box only positions the aura; the inner one clips the photo,
+    // so hover zooms inside imgClassName stay contained while the glow can
+    // spill past the edges.
+    <div className={`relative isolate ${className ?? ""}`}>
+      <span aria-hidden className="frame-aura" />
+      <div
+        className={`relative overflow-hidden bg-ink/[0.04] ${
+          fit === "cover" ? "h-full w-full" : "w-full"
+        }`}
+      >
+        <Image
+          src={p.src}
+          alt={alt}
+          width={p.w}
+          height={p.h}
+          placeholder="blur"
+          blurDataURL={p.blur}
+          sizes={sizes}
+          priority={priority}
+          quality={quality}
+          className={`w-full ${
+            fit === "cover" ? "h-full object-cover" : "h-auto"
+          } ${imgClassName ?? ""}`}
+        />
+        {ring && (
+          <span className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-ink/10" />
+        )}
+      </div>
     </div>
   );
 }

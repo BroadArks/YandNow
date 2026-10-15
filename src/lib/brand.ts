@@ -148,6 +148,12 @@ export const clientLogos: ClientLogo[] = [
     "h": 128
   },
   {
+    "slug": "nabard",
+    "name": "NABARD",
+    "w": 286,
+    "h": 128
+  },
+  {
     "slug": "nsdc",
     "name": "National Skill Development Corporation",
     "w": 291,

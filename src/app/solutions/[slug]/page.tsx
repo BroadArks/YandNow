@@ -104,7 +104,7 @@ export default async function SolutionPage({ params }: PageProps<"/solutions/[sl
               <li key={o.title} className="border-b border-line">
                 <Reveal y={16}>
                   <div className="grid gap-4 py-9 md:grid-cols-[4rem_1fr_1.15fr] md:items-baseline md:gap-8">
-                    <span className="font-mono text-xs tracking-[0.16em] text-ink-30 tabular-nums">
+                    <span className="font-mono text-[0.8125rem] tracking-[0.16em] text-ink-30 tabular-nums">
                       {String(idx + 1).padStart(2, "0")}
                     </span>
                     <h3 className="font-display text-[1.375rem] leading-[1.15] font-semibold tracking-[-0.03em] md:text-[1.5rem]">
@@ -197,7 +197,7 @@ export default async function SolutionPage({ params }: PageProps<"/solutions/[sl
                   // that width instead of hugging the left edge of it.
                   <RevealItem key={p.title} className="bg-paper-warm p-8 md:p-10" y={18}>
                     <div className="grid gap-x-10 gap-y-5 md:grid-cols-[8rem_1fr_auto] md:items-start">
-                      <p className="font-mono text-[0.6875rem] tracking-[0.14em] text-ink-30 tabular-nums">
+                      <p className="font-mono text-[0.8125rem] tracking-[0.14em] text-ink-30 tabular-nums">
                         {p.year}
                       </p>
                       <div>
@@ -212,7 +212,7 @@ export default async function SolutionPage({ params }: PageProps<"/solutions/[sl
                         {p.trades.map((t) => (
                           <li
                             key={t}
-                            className="rounded-full border border-line px-2.5 py-1 text-[0.75rem] text-ink-50"
+                            className="rounded-full border border-line px-2.5 py-1 text-[0.8125rem] text-ink-50"
                           >
                             {t}
                           </li>
@@ -226,7 +226,7 @@ export default async function SolutionPage({ params }: PageProps<"/solutions/[sl
                     className={`bg-paper-warm ${roomy ? "p-8 md:p-9" : "p-7"}`}
                     y={18}
                   >
-                    <p className="font-mono text-[0.6875rem] tracking-[0.14em] text-ink-30 tabular-nums">
+                    <p className="font-mono text-[0.8125rem] tracking-[0.14em] text-ink-30 tabular-nums">
                       {p.year}
                     </p>
                     <h3
@@ -243,7 +243,7 @@ export default async function SolutionPage({ params }: PageProps<"/solutions/[sl
                       {p.trades.map((t) => (
                         <li
                           key={t}
-                          className="rounded-full border border-line px-2.5 py-1 text-[0.75rem] text-ink-50"
+                          className="rounded-full border border-line px-2.5 py-1 text-[0.8125rem] text-ink-50"
                         >
                           {t}
                         </li>

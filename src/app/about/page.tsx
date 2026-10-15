@@ -218,7 +218,7 @@ export default function AboutPage() {
                   aria-hidden
                   className="absolute inset-x-0 top-0 h-[2px] origin-left scale-x-0 bg-cyan-brand transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-x-100"
                 />
-                <span className="font-mono text-xs tracking-[0.16em] text-cyan-brand tabular-nums">
+                <span className="font-mono text-[0.8125rem] tracking-[0.16em] text-cyan-brand tabular-nums">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <h3 className="mt-6 font-display text-[1.625rem] leading-[1.12] font-semibold tracking-[-0.032em] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-1 md:text-[2rem]">
@@ -261,7 +261,7 @@ export default function AboutPage() {
           >
             {PRINCIPLES.map((p, i) => (
               <RevealItem key={p.title} className="bg-paper-warm p-8 md:p-10" y={18}>
-                <span className="font-mono text-xs tracking-[0.16em] text-indigo-brand tabular-nums">
+                <span className="font-mono text-[0.8125rem] tracking-[0.16em] text-indigo-brand tabular-nums">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <h3 className="mt-5 font-display text-[1.375rem] leading-[1.18] font-semibold tracking-[-0.03em]">
@@ -327,7 +327,7 @@ export default function AboutPage() {
               <li key={t.year} className="border-b border-line">
                 <div className="grid gap-6 py-10 md:grid-cols-[7rem_1fr_16rem] md:items-start md:gap-10 lg:grid-cols-[8rem_1fr_20rem]">
                   <Reveal>
-                    <span className="font-mono text-xs tracking-[0.16em] text-indigo-brand tabular-nums">
+                    <span className="font-mono text-[0.8125rem] tracking-[0.16em] text-indigo-brand tabular-nums">
                       {t.year}
                     </span>
                   </Reveal>
@@ -428,7 +428,7 @@ export default function AboutPage() {
                   aria-hidden
                   className="absolute -top-px left-0 h-[2px] w-full origin-left scale-x-0 bg-indigo-brand transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-x-100"
                 />
-                <span className="font-mono text-xs tracking-[0.16em] text-indigo-brand tabular-nums">
+                <span className="font-mono text-[0.8125rem] tracking-[0.16em] text-indigo-brand tabular-nums">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <h3 className="mt-5 font-display text-[1.375rem] leading-[1.18] font-semibold tracking-[-0.03em]">

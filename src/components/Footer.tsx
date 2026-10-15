@@ -40,7 +40,7 @@ export default function Footer() {
                 </Link>
                 <a
                   href={`mailto:${site.email}`}
-                  className="font-mono text-xs tracking-[0.12em] text-white/50 uppercase underline decoration-white/20 decoration-1 underline-offset-[6px] transition-colors hover:text-white hover:decoration-cyan-brand"
+                  className="font-mono text-[0.8125rem] tracking-[0.12em] text-white/50 uppercase underline decoration-white/20 decoration-1 underline-offset-[6px] transition-colors hover:text-white hover:decoration-cyan-brand"
                 >
                   {site.email}
                 </a>
@@ -136,7 +136,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col justify-between gap-6">
-          <p className="font-mono text-[0.6875rem] leading-relaxed tracking-[0.1em] text-white/30 uppercase">
+          <p className="font-mono text-[0.8125rem] leading-relaxed tracking-[0.1em] text-white/30 uppercase">
             NSQF-aligned delivery
             <br />
             ISO 9001:2015 processes
@@ -145,10 +145,10 @@ export default function Footer() {
       </div>
 
       <div className="shell flex flex-col gap-3 border-t border-white/10 py-6 sm:flex-row sm:items-center sm:justify-between">
-        <p className="font-mono text-[0.6875rem] tracking-[0.1em] text-white/30 uppercase">
+        <p className="font-mono text-[0.8125rem] tracking-[0.1em] text-white/30 uppercase">
           © {year} {site.legal}
         </p>
-        <p className="font-mono text-[0.6875rem] tracking-[0.1em] text-white/30 uppercase">
+        <p className="font-mono text-[0.8125rem] tracking-[0.1em] text-white/30 uppercase">
           Photography from live programmes, 2020–2026
         </p>
       </div>
