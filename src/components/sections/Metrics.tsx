@@ -32,7 +32,7 @@ export default function Metrics() {
                 className="block font-display text-[clamp(2.6rem,5.4vw,4.25rem)] leading-[0.92] font-semibold tracking-[-0.045em] tabular-nums"
               />
               <p className="mt-4 text-[1.0625rem] font-medium">{m.label}</p>
-              <p className="mt-1.5 max-w-[24ch] text-sm leading-relaxed text-white/55">
+              <p className="mt-1.5 max-w-[24ch] text-sm leading-relaxed text-white/65">
                 {m.note}
               </p>
             </RevealItem>

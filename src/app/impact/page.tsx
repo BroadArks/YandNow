@@ -62,7 +62,7 @@ export default function ImpactPage() {
                   className="block font-display text-[clamp(2.25rem,4.6vw,3.75rem)] leading-none font-semibold tracking-[-0.045em] tabular-nums"
                 />
                 <p className="mt-3.5 text-[1.0625rem] font-medium">{m.label}</p>
-                <p className="mt-1.5 max-w-[24ch] text-sm leading-relaxed text-white/55">
+                <p className="mt-1.5 max-w-[24ch] text-sm leading-relaxed text-white/65">
                   {OUTCOME_NOTES[i] ?? m.note}
                 </p>
               </Reveal>

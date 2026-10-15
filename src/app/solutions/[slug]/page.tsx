@@ -147,7 +147,7 @@ export default async function SolutionPage({ params }: PageProps<"/solutions/[sl
             lines={s.fieldLines}
           />
           <Reveal delay={0.12}>
-            <p className="mt-6 max-w-[52ch] text-[1.0625rem] leading-relaxed text-white/55">
+            <p className="mt-6 max-w-[52ch] text-[1.0625rem] leading-relaxed text-white/65">
               {s.fieldSub}
             </p>
           </Reveal>

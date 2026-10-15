@@ -107,7 +107,7 @@ export default function Reach() {
                         {r.name}
                       </span>
                     </span>
-                    <span className="mt-0.5 block pl-3.5 font-mono text-[0.75rem] tracking-[0.1em] text-white/35 uppercase">
+                    <span className="mt-0.5 block pl-3.5 font-mono text-[0.75rem] tracking-[0.1em] text-white/55 uppercase">
                       {r.note}
                     </span>
                   </button>
@@ -116,7 +116,7 @@ export default function Reach() {
             })}
             <RevealItem y={16}>
               <p className="pl-3.5 text-[0.9375rem] font-medium">+ 8 more states</p>
-              <p className="mt-0.5 pl-3.5 font-mono text-[0.75rem] tracking-[0.1em] text-white/35 uppercase">
+              <p className="mt-0.5 pl-3.5 font-mono text-[0.75rem] tracking-[0.1em] text-white/55 uppercase">
                 Programme-linked
               </p>
             </RevealItem>
@@ -182,7 +182,7 @@ export default function Reach() {
                     <p className="font-display text-[1.25rem] font-semibold tracking-[-0.02em]">
                       {hovered ? hovered.name : `${REGIONS.length} states shown`}
                     </p>
-                    <p className="mt-1 font-mono text-[0.75rem] tracking-[0.1em] text-white/45 uppercase">
+                    <p className="mt-1 font-mono text-[0.75rem] tracking-[0.1em] text-white/60 uppercase">
                       {hovered ? hovered.note : "Hover to explore"}
                     </p>
                   </motion.div>
@@ -197,7 +197,7 @@ export default function Reach() {
                 12
               </p>
               <p className="mt-3 text-[0.9375rem] font-medium">Mobile training units</p>
-              <p className="mt-1.5 text-sm leading-relaxed text-white/50">
+              <p className="mt-1.5 text-sm leading-relaxed text-white/65">
                 Each fitted with a live engine rig, diagnostic bench and seating for
                 sixteen. Commissioned, maintained and staffed by us.
               </p>
@@ -205,7 +205,7 @@ export default function Reach() {
           </Reveal>
 
           {/* The outline is CC BY 4.0, which asks for visible credit. */}
-          <p className="mt-4 font-mono text-[0.6875rem] tracking-[0.08em] text-white/25">
+          <p className="mt-4 font-mono text-[0.6875rem] tracking-[0.08em] text-white/45">
             Map outline: svg-maps, CC BY 4.0
           </p>
         </div>

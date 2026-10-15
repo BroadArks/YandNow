@@ -57,10 +57,10 @@ export default async function BlogPostPage({ params }: PageProps<"/blog/[slug]">
                 { label: "Blog", href: "/blog" },
               ].map((b) => (
                 <span key={b.href} className="flex items-center gap-2">
-                  <Link href={b.href} className="eyebrow text-white/40 transition-colors hover:text-cyan-brand">
+                  <Link href={b.href} className="eyebrow text-white/60 transition-colors hover:text-cyan-brand">
                     {b.label}
                   </Link>
-                  <span className="eyebrow text-white/25">/</span>
+                  <span className="eyebrow text-white/45">/</span>
                 </span>
               ))}
               <span className="eyebrow text-white/60">{post.category}</span>
@@ -89,10 +89,10 @@ export default async function BlogPostPage({ params }: PageProps<"/blog/[slug]">
                 </span>
                 <div>
                   <p className="text-[0.9375rem] font-medium">{post.author.name}</p>
-                  <p className="text-sm text-white/50">{post.author.role}</p>
+                  <p className="text-sm text-white/65">{post.author.role}</p>
                 </div>
               </div>
-              <p className="font-mono text-[0.75rem] tracking-[0.12em] text-white/50 uppercase tabular-nums">
+              <p className="font-mono text-[0.75rem] tracking-[0.12em] text-white/65 uppercase tabular-nums">
                 {formatBlogDate(post.date)} · {post.readMinutes} min read
               </p>
             </div>
