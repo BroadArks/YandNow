@@ -247,7 +247,7 @@ export default function AboutPage() {
               />
             </div>
             <Reveal delay={0.1}>
-              <p className="max-w-[34ch] text-[0.9375rem] leading-relaxed text-ink-50">
+              <p className="max-w-[46ch] text-[0.9375rem] leading-relaxed text-ink-50">
                 We only run programmes that meet these four standards, ensuring our
                 delivery remains honest, rigorous, and accountable from day one.
               </p>
