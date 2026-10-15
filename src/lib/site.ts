@@ -390,12 +390,9 @@ export const method = [
 /* ──────────────────────────────────────────────────────────
    Leadership
 
-   PLACEHOLDER CONTENT. The names below are not real and the bios describe the
-   remit of each seat rather than anybody's career — inventing history for a
-   real person is worse than leaving it blank. Replace `name`, `bio` and
-   `linkedin`, then drop a portrait at public/team/<slug>.webp and set `photo`.
-   Until `photo` is set the card falls back to a monogram plate, so the section
-   is presentable with no imagery at all.
+   The bios describe the remit of each seat rather than anybody's career.
+   Portraits live at public/team/<slug>.webp; a leader without `photo` falls
+   back to a monogram plate.
    ────────────────────────────────────────────────────────── */
 export type Leader = {
   slug: string;
@@ -410,18 +407,20 @@ export type Leader = {
 
 export const leadership: Leader[] = [
   {
-    slug: "founder",
-    name: "Founder name",
+    slug: "pankaj-dutta",
+    name: "Mr. Pankaj Dutta",
     role: "Founder & Managing Director",
     bio: "Sets what YandNow will and will not take on. Owns the partner relationships that turn a mandate into a funded programme, and holds the line on our core rules whenever a client requests a shortcut.",
     focus: ["Partnerships", "Programme strategy"],
+    photo: "/team/pankaj-dutta.webp",
   },
   {
-    slug: "co-founder",
-    name: "Co-founder name",
+    slug: "kaveri-dutta",
+    name: "Dr. Kaveri Dutta",
     role: "Co-founder & Director, Delivery",
     bio: "Runs everything between the signed scope and the certificate: training centres, mobile units, the trainer bench and the assessment calendar. Accountable for ensuring the numbers published on our Impact page match what the field actually returned.",
     focus: ["Delivery & operations", "Trainer capability"],
+    photo: "/team/kaveri-dutta.webp",
   },
 ];
 
