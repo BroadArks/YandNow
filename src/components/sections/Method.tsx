@@ -34,7 +34,7 @@ export default function Method() {
           </div>
           <Reveal delay={0.12}>
             <p className="eyebrow max-w-[36ch] leading-normal text-paper-warm">
-              How we build every programme.
+              How we build programmes.
             </p>
             <p className="mt-4 max-w-[36ch] text-[0.9375rem] leading-relaxed text-white/65">
               A step-by-step framework built to deliver, whether we are
