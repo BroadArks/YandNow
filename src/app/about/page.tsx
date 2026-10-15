@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import Frame from "@/components/Frame";
-import Method from "@/components/sections/Method";
 import PartnerMarquee from "@/components/sections/PartnerMarquee";
 import Faq from "@/components/Faq";
 import Leadership from "@/components/sections/Leadership";
@@ -357,8 +356,6 @@ export default function AboutPage() {
           </ol>
         </div>
       </section>
-
-      <Method />
 
       {/* Trainers */}
       <section className="bg-paper-warm py-24 md:py-32">
