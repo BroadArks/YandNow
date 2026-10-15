@@ -229,10 +229,14 @@ export function ScaleInFrame({
   const scale = useTransform(scrollYProgress, [0, 1], [from, 1]);
 
   return (
-    <div ref={ref} className={`overflow-hidden ${className ?? ""}`}>
-      <motion.div style={reduce ? undefined : { scale }} className="h-full w-full">
-        {children}
-      </motion.div>
+    // The aura lives outside the clip box so the glow can halo the frame.
+    <div ref={ref} className={`relative isolate ${className ?? ""}`}>
+      <span aria-hidden className="frame-aura" />
+      <div className="h-full w-full overflow-hidden">
+        <motion.div style={reduce ? undefined : { scale }} className="h-full w-full">
+          {children}
+        </motion.div>
+      </div>
     </div>
   );
 }

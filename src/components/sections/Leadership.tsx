@@ -70,7 +70,7 @@ export default function Leadership({
                     {person.focus.map((f) => (
                       <span
                         key={f}
-                        className="rounded-full border border-line bg-paper-warm px-3 py-1.5 text-xs font-medium text-ink-50"
+                        className="rounded-full border border-line bg-paper-warm px-3 py-1.5 text-[0.8125rem] font-medium text-ink-50"
                       >
                         {f}
                       </span>

@@ -62,7 +62,7 @@ export default function SolutionsPage() {
                   <div>
                     <Reveal>
                       <div className="flex items-center gap-4">
-                        <span className="font-mono text-xs tracking-[0.16em] text-indigo-brand tabular-nums">
+                        <span className="font-mono text-[0.8125rem] tracking-[0.16em] text-indigo-brand tabular-nums">
                           {s.index}
                         </span>
                         <span className="h-px w-12 bg-line" />

@@ -85,7 +85,7 @@ function Step({
       <div className="lg:pl-[clamp(3rem,7vw,7rem)]">
         <Reveal>
           <div className="flex items-baseline gap-4">
-            <span className="font-mono text-xs tracking-[0.16em] text-cyan-brand tabular-nums">
+            <span className="font-mono text-[0.8125rem] tracking-[0.16em] text-cyan-brand tabular-nums">
               {item.step}
             </span>
             <span className="h-px flex-1 bg-white/10" />

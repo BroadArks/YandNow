@@ -54,7 +54,7 @@ export default function Reach() {
             {REGIONS.map((r) => (
               <RevealItem key={r.name} y={16}>
                 <p className="text-[0.9375rem] font-medium">{r.name}</p>
-                <p className="mt-0.5 font-mono text-[0.625rem] tracking-[0.1em] text-white/35 uppercase">
+                <p className="mt-0.5 font-mono text-[0.75rem] tracking-[0.1em] text-white/35 uppercase">
                   {r.note}
                 </p>
               </RevealItem>

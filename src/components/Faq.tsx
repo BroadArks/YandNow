@@ -41,7 +41,7 @@ export default function Faq({
                     aria-expanded={isOpen}
                     className="group flex w-full items-start gap-5 py-7 text-left"
                   >
-                    <span className="mt-[0.45rem] font-mono text-[0.6875rem] tracking-[0.14em] text-ink-30 tabular-nums">
+                    <span className="mt-[0.45rem] font-mono text-[0.8125rem] tracking-[0.14em] text-ink-30 tabular-nums">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <span

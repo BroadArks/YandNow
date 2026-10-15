@@ -67,7 +67,7 @@ export default function SolutionsScroller() {
                 {/* Index plate */}
                 <div className="absolute top-0 left-0 flex items-center gap-3 bg-paper-warm py-3 pr-5">
                   <span className="h-6 w-[3px] bg-indigo-brand" />
-                  <span className="font-mono text-xs tracking-[0.14em] text-ink-50 tabular-nums">
+                  <span className="font-mono text-[0.8125rem] tracking-[0.14em] text-ink-50 tabular-nums">
                     {solutions[active].index} / 06
                   </span>
                 </div>
@@ -89,7 +89,7 @@ export default function SolutionsScroller() {
                 ))}
               </div>
 
-              <p className="mt-5 font-mono text-[0.625rem] tracking-[0.11em] text-ink-30 uppercase">
+              <p className="mt-5 font-mono text-[0.75rem] tracking-[0.11em] text-ink-30 uppercase">
                 Photographed on live programmes
               </p>
             </div>
@@ -125,7 +125,7 @@ export default function SolutionsScroller() {
                   />
                   <div className="p-5">
                     <div className="flex items-center gap-3">
-                      <span className="font-mono text-[0.6875rem] tracking-[0.14em] text-indigo-brand tabular-nums">
+                      <span className="font-mono text-[0.8125rem] tracking-[0.14em] text-indigo-brand tabular-nums">
                         {s.index}
                       </span>
                       <span className="h-px flex-1 bg-line" />
@@ -182,7 +182,7 @@ function Entry({
       >
         <div className="flex items-start gap-6">
           <span
-            className={`mt-[0.6rem] font-mono text-xs tracking-[0.14em] tabular-nums transition-colors duration-500 ${
+            className={`mt-[0.6rem] font-mono text-[0.8125rem] tracking-[0.14em] tabular-nums transition-colors duration-500 ${
               isActive ? "text-indigo-brand" : "text-ink-30"
             }`}
           >
@@ -216,7 +216,7 @@ function Entry({
                 {s.audience.slice(0, 3).map((a) => (
                   <li
                     key={a}
-                    className="rounded-full border border-line bg-paper px-3 py-1.5 text-xs font-medium text-ink-50"
+                    className="rounded-full border border-line bg-paper px-3 py-1.5 text-[0.8125rem] font-medium text-ink-50"
                   >
                     {a}
                   </li>

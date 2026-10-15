@@ -68,7 +68,7 @@ export default function ArchiveExplorer({ programmes }: { programmes: Programme[
           </Reveal>
         </div>
 
-        <p className="mt-8 font-mono text-[0.6875rem] tracking-[0.12em] text-ink-30 uppercase tabular-nums">
+        <p className="mt-8 font-mono text-[0.8125rem] tracking-[0.12em] text-ink-30 uppercase tabular-nums">
           {shown.length} {shown.length === 1 ? "programme" : "programmes"}
         </p>
 
@@ -92,7 +92,7 @@ export default function ArchiveExplorer({ programmes }: { programmes: Programme[
                     aria-expanded={isOpen}
                     className="group grid w-full gap-x-6 gap-y-2 py-7 text-left md:grid-cols-[6.5rem_1fr_11rem_auto] md:items-baseline"
                   >
-                    <span className="font-mono text-xs tracking-[0.14em] text-indigo-brand tabular-nums">
+                    <span className="font-mono text-[0.8125rem] tracking-[0.14em] text-indigo-brand tabular-nums">
                       {p.year}
                     </span>
 

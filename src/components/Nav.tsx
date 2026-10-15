@@ -154,7 +154,7 @@ export default function Nav() {
                                   onClick={() => setMenu(null)}
                                   className="flex items-baseline gap-3 rounded-lg px-3 py-2.5 transition-colors duration-200 hover:bg-paper"
                                 >
-                                  <span className="font-mono text-[0.625rem] tracking-[0.14em] text-ink-30 tabular-nums">
+                                  <span className="font-mono text-[0.75rem] tracking-[0.14em] text-ink-30 tabular-nums">
                                     {s.index}
                                   </span>
                                   <span className="min-w-0 text-[0.9375rem] font-medium text-ink">
@@ -283,7 +283,7 @@ export default function Nav() {
                 </Link>
                 <a
                   href={`mailto:${site.email}`}
-                  className="mt-5 block font-mono text-xs tracking-[0.1em] text-white/50 uppercase"
+                  className="mt-5 block font-mono text-[0.8125rem] tracking-[0.1em] text-white/50 uppercase"
                 >
                   {site.email}
                 </a>

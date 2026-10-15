@@ -132,7 +132,7 @@ export default function Testimonials() {
                   </span>
                 </button>
               ))}
-              <span className="ml-3 font-mono text-[0.6875rem] tracking-[0.12em] text-ink-30 tabular-nums">
+              <span className="ml-3 font-mono text-[0.8125rem] tracking-[0.12em] text-ink-30 tabular-nums">
                 {String(i + 1).padStart(2, "0")} / {String(testimonials.length).padStart(2, "0")}
               </span>
 

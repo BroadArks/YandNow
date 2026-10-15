@@ -77,7 +77,7 @@ export default function HorizontalGallery() {
                     <span className="block text-[0.9375rem] font-medium text-ink">
                       {p.caption}
                     </span>
-                    <span className="mt-0.5 block font-mono text-[0.625rem] tracking-[0.11em] text-ink-30 uppercase">
+                    <span className="mt-0.5 block font-mono text-[0.75rem] tracking-[0.11em] text-ink-30 uppercase">
                       {p.place}
                     </span>
                   </span>
@@ -122,7 +122,7 @@ export default function HorizontalGallery() {
               />
               <figcaption className="mt-3">
                 <span className="block text-sm font-medium text-ink">{p.caption}</span>
-                <span className="mt-0.5 block font-mono text-[0.625rem] tracking-[0.11em] text-ink-30 uppercase">
+                <span className="mt-0.5 block font-mono text-[0.75rem] tracking-[0.11em] text-ink-30 uppercase">
                   {p.place}
                 </span>
               </figcaption>
