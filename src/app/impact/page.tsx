@@ -29,6 +29,7 @@ export default function ImpactPage() {
         eyebrow="Proven track record · Impact archive"
         lines={["14 programmes.", "Hands-on training", "across all 6 verticals."]}
         lede="No composite stories, no stock photos and no inflated figures. This is our complete execution history: real site locations, specific trades, verified numbers and ground photography, logged year by year."
+        aura={false}
         photo="defence-assembly"
         photoAlt="Uniformed personnel assembled in a hall for a technical training briefing"
         breadcrumb={[

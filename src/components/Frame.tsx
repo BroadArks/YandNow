@@ -16,6 +16,7 @@ export default function Frame({
   quality = 82,
   fit = "cover",
   ring = true,
+  aura = true,
 }: {
   name: PhotoKey;
   alt: string;
@@ -35,6 +36,8 @@ export default function Frame({
    * frames butt against each other — two adjacent rings read as a seam.
    */
   ring?: boolean;
+  /** The drifting glow behind the photo. Off where a page wants flat imagery. */
+  aura?: boolean;
 }) {
   const p = photos[name];
 
@@ -43,7 +46,7 @@ export default function Frame({
     // so hover zooms inside imgClassName stay contained while the glow can
     // spill past the edges.
     <div className={`relative isolate ${className ?? ""}`}>
-      <span aria-hidden className="frame-aura" />
+      {aura && <span aria-hidden className="frame-aura" />}
       <div
         className={`relative overflow-hidden bg-ink/[0.04] ${
           fit === "cover" ? "h-full w-full" : "w-full"
