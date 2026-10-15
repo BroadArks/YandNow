@@ -49,7 +49,7 @@ export default function SolutionsPage() {
                     i % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
                   }`}
                 >
-                  <div className="overflow-hidden">
+                  <div>
                     <Frame
                       name={s.hero}
                       alt={`${s.title}: ${s.summary}`}

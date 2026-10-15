@@ -264,6 +264,21 @@
   will-change: transform, background-position;
 }
 
+/* On dark sections a brand-tinted glow disappears into the background, so
+   the aura turns to soft white light instead. */
+:is(.bg-ink, .bg-indigo-ink, .bg-indigo-deep, .bg-indigo-brand) .frame-aura {
+  background: linear-gradient(
+    120deg,
+    rgb(255 255 255 / 0.9),
+    color-mix(in oklab, var(--color-cyan-soft) 60%, white),
+    rgb(255 255 255 / 0.6),
+    color-mix(in oklab, var(--color-cyan-soft) 40%, white),
+    rgb(255 255 255 / 0.9)
+  );
+  background-size: 300% 300%;
+  opacity: 0.15;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

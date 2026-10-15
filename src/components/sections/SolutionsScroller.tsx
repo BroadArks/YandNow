@@ -44,7 +44,7 @@ export default function SolutionsScroller() {
         <div className="mt-16 hidden lg:grid lg:grid-cols-[0.92fr_1.08fr] lg:gap-16 xl:gap-24">
           <div className="relative">
             <div className="sticky top-[14vh]">
-              <div className="relative aspect-[4/5] w-full overflow-hidden">
+              <div className="relative aspect-[4/5] w-full">
                 {solutions.map((s, i) => (
                   <motion.div
                     key={s.slug}
