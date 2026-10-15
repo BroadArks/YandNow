@@ -308,7 +308,7 @@ export default async function SolutionPage({ params }: PageProps<"/solutions/[sl
                 </svg>
               </span>
             </div>
-            <div className="overflow-hidden md:w-[22rem]">
+            <div className="md:w-[22rem]">
               <Frame
                 name={next.hero}
                 alt={next.title}
