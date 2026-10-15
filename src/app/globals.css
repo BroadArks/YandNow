@@ -166,7 +166,7 @@
     transition: opacity 400ms var(--ease-out-soft);
   }
   .marquee-host:hover .logo-mark {
-    opacity: 0.55;
+    opacity: 0.32;
   }
   .marquee-host .logo-mark:hover {
     opacity: 1;
@@ -228,27 +228,27 @@
 @keyframes aura-drift {
   0% {
     background-position: 0% 50%;
-    transform: translate3d(-4%, 2%, 0) scale(1);
+    transform: translate3d(-1%, 0.5%, 0) scale(1);
   }
   33% {
     background-position: 60% 0%;
-    transform: translate3d(3%, -3%, 0) scale(1.06);
+    transform: translate3d(1%, -1%, 0) scale(1.015);
   }
   66% {
     background-position: 100% 100%;
-    transform: translate3d(4%, 3%, 0) scale(1.02);
+    transform: translate3d(1%, 1%, 0) scale(1.005);
   }
   100% {
     background-position: 0% 50%;
-    transform: translate3d(-4%, 2%, 0) scale(1);
+    transform: translate3d(-1%, 0.5%, 0) scale(1);
   }
 }
 .frame-aura {
   position: absolute;
-  inset: -7%;
+  inset: -2%;
   z-index: -1;
   pointer-events: none;
-  border-radius: 9999px;
+  border-radius: 0;
   background: linear-gradient(
     120deg,
     var(--color-indigo-brand),
@@ -258,8 +258,8 @@
     var(--color-cyan-brand)
   );
   background-size: 300% 300%;
-  filter: blur(44px);
-  opacity: 0.55;
+  filter: blur(22px);
+  opacity: 0.32;
   animation: aura-drift 11s ease-in-out infinite;
   will-change: transform, background-position;
 }
