@@ -204,10 +204,6 @@ export default function Reach() {
             </div>
           </Reveal>
 
-          {/* The outline is CC BY 4.0, which asks for visible credit. */}
-          <p className="mt-4 font-mono text-[0.6875rem] tracking-[0.08em] text-white/45">
-            Map outline: svg-maps, CC BY 4.0
-          </p>
         </div>
       </div>
     </section>
