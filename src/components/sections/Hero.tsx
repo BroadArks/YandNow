@@ -54,7 +54,7 @@ export default function Hero() {
           </span>
           <p className="eyebrow text-cyan-brand">Skill development · India</p>
           <span className="hidden h-px w-14 bg-white/25 sm:block" />
-          <p className="eyebrow text-white/65">Since 2020</p>
+          <p className="eyebrow text-white/90">Since 2020</p>
         </motion.div>
 
         {/* ── Row 2: headline over the footage ───────────── */}
@@ -96,7 +96,7 @@ export default function Hero() {
             {/* max-width in `ch` must live on the paragraph itself: on the
                 wrapper it resolves against the parent's 16px, not the lede's
                 own size, so the measure drifted wider as the font scaled up. */}
-            <p className="lede hero-copy max-w-[58ch] text-white/85">
+            <p className="lede hero-copy max-w-[58ch] text-white/90">
               Hands-on training on live equipment in real time, built for
               operators, technicians and lab teams.
             </p>
@@ -126,7 +126,7 @@ export default function Hero() {
               </Link>
               <Link
                 href="/solutions"
-                className="group inline-flex items-center gap-2 py-4 font-medium text-white/80 transition-colors duration-300 hover:text-white"
+                className="group inline-flex items-center gap-2 py-4 font-medium text-white/90 transition-colors duration-300 hover:text-white"
               >
                 <span className="relative">
                   Explore courses
@@ -146,7 +146,7 @@ export default function Hero() {
             className="hero-copy flex items-center gap-3"
           >
             <span className="h-8 w-[3px] shrink-0 bg-cyan-brand" />
-            <p className="font-mono text-[0.75rem] leading-relaxed tracking-[0.11em] text-white/60 uppercase">
+            <p className="font-mono text-[0.75rem] leading-relaxed tracking-[0.11em] text-white/85 uppercase">
               Advanced manufacturing
               <br />
               Technology &amp; robotics labs
@@ -189,7 +189,7 @@ function VerticalTicker() {
       transition={{ duration: 1, delay: 1 }}
       className="hero-copy flex min-w-0 flex-col items-start gap-y-0.5 sm:flex-row sm:items-center sm:gap-x-3"
     >
-      <p className="eyebrow shrink-0 text-white/60">We work in</p>
+      <p className="eyebrow shrink-0 text-white/85">We work in</p>
       <span className="relative block h-6 w-full min-w-[13rem] overflow-hidden sm:w-[15rem]">
         <AnimatePresence mode="wait" initial={false}>
           <motion.span
