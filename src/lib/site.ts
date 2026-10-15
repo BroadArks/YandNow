@@ -252,7 +252,7 @@ export const solutions: Solution[] = [
       { stat: "78%", label: "Placed within 6 months" },
     ],
     gallery: ["defence-engine-class", "defence-mobile-unit", "defence-assembly", "hcv-engine-bay", "van-engine-instruction", "mobile-classroom"],
-    deliverLines: ["Practical pathways from military", "service to industry careers."],
+    deliverLines: ["From Military service", "to industry careers."],
     fieldLines: ["Real service members.", "Real career transitions."],
     deliverSub: "Structured modules designed to recognise existing experience and build industry-ready technical skills right on station.",
     fieldSub: "Photographed on live YandNow defence cohorts between 2020 and 2026.",
