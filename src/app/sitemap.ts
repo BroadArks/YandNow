@@ -1,12 +1,13 @@
 import type { MetadataRoute } from "next";
 import { solutions } from "@/lib/site";
+import { getAllPosts } from "@/lib/blog";
 
 const BASE = "https://yandnow.com";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
 
-  const pages = ["", "/solutions", "/impact", "/about", "/contact"].map((p) => ({
+  const pages = ["", "/solutions", "/impact", "/about", "/contact", "/blog"].map((p) => ({
     url: `${BASE}${p}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
@@ -20,5 +21,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...pages, ...verticals];
+  const posts = (await getAllPosts()).map((p) => ({
+    url: `${BASE}/blog/${p.slug}`,
+    lastModified: new Date(p.date),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...pages, ...verticals, ...posts];
 }
