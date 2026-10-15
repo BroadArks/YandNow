@@ -29,11 +29,14 @@ export default function Method() {
             <MaskLines
               as="h2"
               className="display-lg mt-6 max-w-[22ch] font-semibold"
-              lines={["From initial map to real-world impact:", "how we build every programme."]}
+              lines={["From initial map to", "real-world impact."]}
             />
           </div>
           <Reveal delay={0.12}>
-            <p className="max-w-[36ch] text-[0.9375rem] leading-relaxed text-white/65">
+            <p className="eyebrow max-w-[36ch] leading-normal text-paper-warm">
+              How we build programmes
+            </p>
+            <p className="mt-4 max-w-[36ch] text-[0.9375rem] leading-relaxed text-white/65">
               A step-by-step framework built to deliver, whether we are
               partner-building with an automotive OEM or a local livelihood team.
             </p>
