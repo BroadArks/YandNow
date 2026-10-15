@@ -1,52 +1,77 @@
+import Image from "next/image";
 import type { BlogPost } from "@/lib/blog";
+import { photos, type PhotoKey } from "@/lib/photos";
 
-/**
- * A post's cover: the uploaded image when there is one, otherwise a gradient
- * built from the post's "r,g,b" tint so every card still has a plate. Wears
- * the same drifting aura as Frame, so blog imagery reads like the rest of the
- * site.
- */
+/* Until posts carry their own uploads, covers fall back to field photography
+   from /public, picked by category so related posts look related. */
+const BY_CATEGORY: Record<string, PhotoKey> = {
+  "Learning & Development": "cohort-classroom",
+  "CSR & Impact": "medical-camp-community",
+  Industry: "welding-shopfloor",
+  Defence: "defence-engine-class",
+  Schools: "helmet-engine-lab",
+  "Micro-Entrepreneurship": "tailoring-floor",
+};
+const POOL: PhotoKey[] = [
+  "engine-briefing",
+  "cnc-instruction",
+  "mobile-classroom",
+  "diagnostics-group",
+  "safety-briefing",
+  "packaging-practical",
+];
+
+function fallbackPhoto(post: BlogPost): PhotoKey {
+  const mapped = BY_CATEGORY[post.category];
+  if (mapped) return mapped;
+  let h = 0;
+  for (const c of post.slug) h = (h * 31 + c.charCodeAt(0)) >>> 0;
+  return POOL[h % POOL.length];
+}
+
+/** A post's cover: the CMS upload when there is one, otherwise a site photo. */
 export default function PostCover({
   post,
   className,
   imgClassName,
+  sizes = "(min-width: 1024px) 40vw, 100vw",
+  priority = false,
 }: {
   post: BlogPost;
   className?: string;
   imgClassName?: string;
+  sizes?: string;
+  priority?: boolean;
 }) {
-  const tint = post.tint || "46,49,146";
+  const p = photos[fallbackPhoto(post)];
 
   return (
-    <div className={`relative isolate ${className ?? ""}`}>
-      <span aria-hidden className="frame-aura" />
-      <div className="relative h-full w-full overflow-hidden bg-ink/[0.04]">
-        {post.coverImage ? (
-          // Cover URLs come from the CMS and can point at any host, so this
-          // stays a plain <img> rather than a next/image remote pattern.
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={post.coverImage}
-            alt=""
-            loading="lazy"
-            className={`h-full w-full object-cover ${imgClassName ?? ""}`}
-          />
-        ) : (
-          <div
-            aria-hidden
-            className={`h-full w-full ${imgClassName ?? ""}`}
-            style={{
-              background: `radial-gradient(120% 90% at 18% 12%, rgba(${tint},0.95), rgba(${tint},0.55) 45%, #16173d 100%)`,
-            }}
-          >
-            <span className="grain-layer absolute inset-0 opacity-[0.18] mix-blend-overlay" />
-            <span className="absolute bottom-5 left-5 font-mono text-[0.75rem] tracking-[0.14em] text-white/70 uppercase">
-              {post.category}
-            </span>
-          </div>
-        )}
-        <span className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-ink/10" />
-      </div>
+    <div className={`relative overflow-hidden bg-ink/[0.04] ${className ?? ""}`}>
+      {post.coverImage ? (
+        // Cover URLs come from the CMS and can point at any host, so this
+        // stays a plain <img> rather than a next/image remote pattern.
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={post.coverImage}
+          alt=""
+          loading={priority ? "eager" : "lazy"}
+          className={`h-full w-full object-cover ${imgClassName ?? ""}`}
+        />
+      ) : (
+        <Image
+          src={p.src}
+          alt=""
+          width={p.w}
+          height={p.h}
+          placeholder="blur"
+          blurDataURL={p.blur}
+          sizes={sizes}
+          priority={priority}
+          quality={82}
+          className={`h-full w-full object-cover ${imgClassName ?? ""}`}
+        />
+      )}
+      <span className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-ink/10" />
     </div>
   );
 }

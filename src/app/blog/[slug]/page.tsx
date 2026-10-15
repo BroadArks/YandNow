@@ -49,7 +49,7 @@ export default async function BlogPostPage({ params }: PageProps<"/blog/[slug]">
     <>
       {/* Header: same dark plate as every inner page, text-led */}
       <section className="relative overflow-hidden bg-indigo-ink text-paper-warm">
-        <div className="shell pt-[132px] pb-40 md:pt-[168px] md:pb-56">
+        <div className="shell pt-[132px] pb-16 md:pt-[168px] md:pb-24">
           <Reveal>
             <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2">
               {[
@@ -100,18 +100,11 @@ export default async function BlogPostPage({ params }: PageProps<"/blog/[slug]">
         </div>
       </section>
 
-      {/* Cover lifts out of the header plate */}
-      <div className="shell relative z-10 -mt-28 md:-mt-40">
-        <Reveal y={30}>
-          <PostCover post={post} className="aspect-[16/8] w-full" />
-        </Reveal>
-      </div>
-
       {/* Body */}
       <article className="bg-paper-warm pt-16 pb-24 md:pt-24 md:pb-32">
         <div className="shell grid gap-12 lg:grid-cols-[13rem_1fr] lg:gap-20">
           <aside className="hidden lg:block">
-            <div className="sticky top-32">
+            <div className="sticky top-32 pt-1">
               <p className="eyebrow text-ink-30">Filed under</p>
               <span className="mt-5 block h-px w-full bg-line" />
               <p className="mt-5 font-display text-[1.0625rem] font-medium text-indigo-brand">
@@ -129,11 +122,23 @@ export default async function BlogPostPage({ params }: PageProps<"/blog/[slug]">
             </div>
           </aside>
 
-          <Reveal>
-            <div className="max-w-[44rem]">
-              <Markdown>{post.content}</Markdown>
-            </div>
-          </Reveal>
+          <div className="min-w-0">
+            {/* Cover sits in the reading column, so its left edge lines up
+                with the text below it. */}
+            <Reveal y={24}>
+              <PostCover
+                post={post}
+                priority
+                className="aspect-[16/9] w-full max-w-[52rem]"
+                sizes="(min-width: 1024px) 52rem, 100vw"
+              />
+            </Reveal>
+            <Reveal>
+              <div className="mt-14 max-w-[44rem] md:mt-16">
+                <Markdown>{post.content}</Markdown>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </article>
 
