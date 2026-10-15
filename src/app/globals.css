@@ -228,34 +228,39 @@
 @keyframes aura-drift {
   0% {
     background-position: 0% 50%;
-    transform: translate3d(-2%, 1%, 0) scale(1);
+    transform: translate3d(-4%, 2%, 0) scale(1);
   }
-  50% {
-    background-position: 100% 50%;
-    transform: translate3d(2%, -1%, 0) scale(1.04);
+  33% {
+    background-position: 60% 0%;
+    transform: translate3d(3%, -3%, 0) scale(1.06);
+  }
+  66% {
+    background-position: 100% 100%;
+    transform: translate3d(4%, 3%, 0) scale(1.02);
   }
   100% {
     background-position: 0% 50%;
-    transform: translate3d(-2%, 1%, 0) scale(1);
+    transform: translate3d(-4%, 2%, 0) scale(1);
   }
 }
 .frame-aura {
   position: absolute;
-  inset: -2%;
+  inset: -7%;
   z-index: -1;
   pointer-events: none;
   border-radius: 9999px;
   background: linear-gradient(
     120deg,
-    color-mix(in oklab, var(--color-indigo-brand) 70%, transparent),
-    color-mix(in oklab, var(--color-cyan-brand) 60%, transparent),
-    color-mix(in oklab, var(--color-indigo-brand) 50%, transparent),
-    color-mix(in oklab, var(--color-cyan-brand) 70%, transparent)
+    var(--color-indigo-brand),
+    var(--color-cyan-brand),
+    var(--color-cyan-soft),
+    var(--color-indigo-brand),
+    var(--color-cyan-brand)
   );
   background-size: 300% 300%;
-  filter: blur(36px);
-  opacity: 0.45;
-  animation: aura-drift 14s ease-in-out infinite;
+  filter: blur(44px);
+  opacity: 0.55;
+  animation: aura-drift 11s ease-in-out infinite;
   will-change: transform, background-position;
 }
 
