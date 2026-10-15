@@ -66,6 +66,13 @@ export default function Testimonials() {
           lines={["Tested on site.", "Proven on the line."]}
         />
 
+        <Reveal delay={0.12}>
+          <p className="mt-6 max-w-[46ch] text-[0.9375rem] leading-relaxed text-ink-50">
+            Honest words from project leaders, community coordinators and workshop
+            managers on the ground.
+          </p>
+        </Reveal>
+
         <div className="mt-14 grid gap-10 border-t border-line pt-12 lg:grid-cols-[1fr_0.62fr] lg:gap-20">
           <div className="flex min-h-[19rem] flex-col justify-between">
             <AnimatePresence mode="wait" custom={dir}>

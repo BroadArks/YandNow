@@ -57,6 +57,10 @@ export type Solution = {
   deliverLines: string[];
   /** "From this vertical" gallery headline, pre-broken into display lines. */
   fieldLines: string[];
+  /** Sub-text under the "What we deliver" headline. */
+  deliverSub: string;
+  /** Caption under the gallery headline. */
+  fieldSub: string;
 };
 
 export const solutions: Solution[] = [
@@ -105,6 +109,8 @@ export const solutions: Solution[] = [
     gallery: ["engine-cohort", "diagnostics-console", "engine-stand-training", "component-demo", "cohort-classroom", "engine-teardown"],
     deliverLines: ["Practical modules built", "for your service floor."],
     fieldLines: ["Real technicians.", "Real workshop bays."],
+    deliverSub: "Every module is 70% hands-on practice, designed to get technicians confident on live equipment before they touch a customer vehicle.",
+    fieldSub: "Photographed on live YandNow corporate cohorts between 2020 and 2026.",
   },
   {
     slug: "csr",
@@ -151,6 +157,8 @@ export const solutions: Solution[] = [
     gallery: ["medical-camp", "vision-screening", "tree-plantation", "medical-camp-community", "volunteer-cohort", "plantation-hands"],
     deliverLines: ["Grounded initiatives built", "for lasting community impact."],
     fieldLines: ["Real communities.", "Real progress."],
+    deliverSub: "Programmes designed around real district needs, combining practical skills with clear, audit-ready data.",
+    fieldSub: "Photographed on live YandNow CSR cohorts between 2020 and 2026.",
   },
   {
     slug: "industry",
@@ -197,6 +205,8 @@ export const solutions: Solution[] = [
     gallery: ["welding-sparks", "cnc-operation", "welding-bay", "electrical-bench", "milling-practical", "sheet-metal-bench"],
     deliverLines: ["Practical trades taught to", "exact shopfloor standards."],
     fieldLines: ["Real trade floors.", "Real precision."],
+    deliverSub: "Heavy skills focused on real-world testing, precise machinery setup and uncompromising site safety.",
+    fieldSub: "Photographed on live YandNow industry cohorts between 2020 and 2026.",
   },
   {
     slug: "defence",
@@ -243,6 +253,8 @@ export const solutions: Solution[] = [
     gallery: ["defence-engine-class", "defence-mobile-unit", "defence-assembly", "hcv-engine-bay", "van-engine-instruction", "mobile-classroom"],
     deliverLines: ["Practical pathways from military", "service to industry careers."],
     fieldLines: ["Real service members.", "Real career transitions."],
+    deliverSub: "Structured modules designed to recognise existing experience and build industry-ready technical skills right on station.",
+    fieldSub: "Photographed on live YandNow defence cohorts between 2020 and 2026.",
   },
   {
     slug: "schools",
@@ -289,6 +301,8 @@ export const solutions: Solution[] = [
     gallery: ["helmet-engine-lab", "safety-briefing", "engine-hands-on", "plumbing-workshop", "engine-briefing", "cnc-instruction"],
     deliverLines: ["Practical career pathways built", "for school classrooms and labs."],
     fieldLines: ["Real students.", "Real tools."],
+    deliverSub: "Interactive programmes designed to give students early technical exposure, practical skills and clear industry understanding.",
+    fieldSub: "Photographed on live YandNow school cohorts between 2020 and 2026.",
   },
   {
     slug: "micro-entrepreneurship",
@@ -335,6 +349,8 @@ export const solutions: Solution[] = [
     gallery: ["tailoring-floor", "packaging-line", "tailoring-hands", "food-processing", "packaging-practical", "farm-implement"],
     deliverLines: ["Practical enterprise building for", "lasting community livelihoods."],
     fieldLines: ["Real local entrepreneurs.", "Real sustainable income."],
+    deliverSub: "Structured modules that combine hands-on trade training with real-world business setup, market access and ongoing mentorship.",
+    fieldSub: "Photographed on live YandNow micro-entrepreneurship cohorts between 2020 and 2026.",
   },
 ];
 

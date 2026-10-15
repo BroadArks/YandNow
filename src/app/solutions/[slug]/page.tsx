@@ -93,6 +93,11 @@ export default async function SolutionPage({ params }: PageProps<"/solutions/[sl
             className="display-md mt-6 max-w-[22ch] font-semibold"
             lines={s.deliverLines}
           />
+          <Reveal delay={0.12}>
+            <p className="mt-6 max-w-[52ch] text-[1.0625rem] leading-relaxed text-ink-50">
+              {s.deliverSub}
+            </p>
+          </Reveal>
 
           <ul className="mt-14 border-t border-line">
             {s.offerings.map((o, idx) => (
@@ -141,6 +146,11 @@ export default async function SolutionPage({ params }: PageProps<"/solutions/[sl
             className="display-md mt-6 max-w-[20ch] font-semibold"
             lines={s.fieldLines}
           />
+          <Reveal delay={0.12}>
+            <p className="mt-6 max-w-[52ch] text-[1.0625rem] leading-relaxed text-white/55">
+              {s.fieldSub}
+            </p>
+          </Reveal>
 
           {/* Three columns, each photo at its own ratio. The stagger comes from
               column offsets, not from cropping anything into a shape. */}
