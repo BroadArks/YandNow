@@ -53,7 +53,7 @@ export default function Nav() {
           <div className="shell flex h-[76px] items-center justify-between gap-6">
             <Link
               href="/"
-              aria-label={`${site.name} — home`}
+              aria-label={`${site.name} home`}
               className="group relative z-10 -ml-1 flex items-center gap-2.5 px-1 py-2"
             >
               {/* Both tones are rendered and cross-faded: swapping `src` on a

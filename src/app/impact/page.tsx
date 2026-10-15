@@ -28,7 +28,7 @@ export default function ImpactPage() {
       <PageHero
         eyebrow="Proven track record · Impact archive"
         lines={["14 programmes.", "Hands-on training", "across all 6 verticals."]}
-        lede="No composite stories, no stock photos and no inflated figures. This is our complete execution history — real site locations, specific trades, verified numbers and ground photography, logged year by year."
+        lede="No composite stories, no stock photos and no inflated figures. This is our complete execution history: real site locations, specific trades, verified numbers and ground photography, logged year by year."
         photo="defence-assembly"
         photoAlt="Uniformed personnel assembled in a hall for a technical training briefing"
         breadcrumb={[
@@ -92,7 +92,7 @@ export default function ImpactPage() {
                 <span className="font-medium text-paper-warm">Trainee counts.</span> We
                 only count individuals who fully completed their course and cleared an
                 independent third-party assessment. Enrolments, walk-ins and one-off
-                awareness attendees are excluded — keeping our headline numbers honest
+                awareness attendees are excluded, keeping our headline numbers honest
                 and grounded.
               </p>
             </Reveal>

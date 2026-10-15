@@ -145,7 +145,7 @@ function Portrait({ person }: { person: Leader }) {
     <div
       className="relative flex aspect-[4/5] w-full max-w-[20rem] items-center justify-center overflow-hidden bg-indigo-ink"
       role="img"
-      aria-label={`${person.name} — portrait to follow`}
+      aria-label={`${person.name}, portrait to follow`}
     >
       <span
         aria-hidden

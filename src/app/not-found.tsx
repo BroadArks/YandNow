@@ -13,7 +13,7 @@ export default function NotFound() {
           </h1>
           <p className="lede mt-7 max-w-[44ch] text-white/60">
             The link is broken or the page has moved. Everything we run is one of
-            six verticals — start there, or go back to the top.
+            six verticals. Start there, or go back to the top.
           </p>
 
           <ul className="mt-10 grid gap-x-8 gap-y-3 border-t border-white/12 pt-8 sm:grid-cols-2">

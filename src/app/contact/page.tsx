@@ -72,7 +72,7 @@ export default function ContactPage() {
                 <ul className="mt-5 space-y-3.5">
                   {[
                     "The trade or role, and roughly how many people",
-                    "Where they are — district or plant location",
+                    "Where they are (district or plant location)",
                     "Whether budget is CSR, corporate or scheme-linked",
                     "When you need the first cohort to start",
                   ].map((l) => (
