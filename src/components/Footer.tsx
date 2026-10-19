@@ -2,7 +2,7 @@ import Link from "next/link";
 import { nav, site, solutions, telHref } from "@/lib/site";
 import Logo from "./Logo";
 import { MaskLines, Reveal } from "./motion-primitives";
-import ArrowLink from "./ArrowLink";
+import SocialIcon from "./SocialIcon";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -78,11 +78,19 @@ export default function Footer() {
               </div>
               <div>
                 <dt className="eyebrow text-white/55">Follow</dt>
-                <dd className="mt-3 space-y-1.5 text-[0.9375rem]">
+                <dd className="mt-4 flex flex-wrap gap-2.5">
                   {site.social.map((s) => (
-                    <ArrowLink key={s.label} href={s.href} tone="light">
-                      {s.label}
-                    </ArrowLink>
+                    <a
+                      key={s.label}
+                      href={s.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`YandNow on ${s.label}`}
+                      title={s.label}
+                      className="grid h-10 w-10 place-items-center rounded-full border border-white/15 text-white/70 transition-colors duration-300 hover:border-cyan-brand hover:bg-cyan-brand hover:text-indigo-ink"
+                    >
+                      <SocialIcon name={s.label} className="h-[17px] w-[17px]" />
+                    </a>
                   ))}
                 </dd>
               </div>
