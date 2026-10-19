@@ -27,6 +27,8 @@ const sections = privacy.body
     return { id, title: title.trim(), body: rest.join("\n").trim() };
   });
 
+const num = (i: number) => String(i + 1).padStart(2, "0");
+
 export default function PrivacyPage() {
   return (
     <>
@@ -67,12 +69,15 @@ export default function PrivacyPage() {
               <p className="eyebrow text-ink-30">On this page</p>
               <span className="mt-5 block h-px w-full bg-line" />
               <ol className="mt-5 space-y-2.5">
-                {sections.map((s) => (
+                {sections.map((s, i) => (
                   <li key={s.id}>
                     <a
                       href={`#${s.id}`}
-                      className="block text-[0.875rem] leading-snug text-ink-50 transition-colors duration-300 hover:text-indigo-brand"
+                      className="group flex gap-3 text-[0.875rem] leading-snug text-ink-50 transition-colors duration-300 hover:text-indigo-brand"
                     >
+                      <span className="w-5 shrink-0 pt-px font-mono text-[0.75rem] text-ink-30 tabular-nums transition-colors duration-300 group-hover:text-indigo-brand">
+                        {num(i)}
+                      </span>
                       {s.title}
                     </a>
                   </li>
@@ -88,7 +93,10 @@ export default function PrivacyPage() {
                   id={s.id}
                   className={`scroll-mt-28 ${i > 0 ? "mt-14 border-t border-line pt-14" : ""}`}
                 >
-                  <h2 className="font-display text-[clamp(1.5rem,2.4vw,1.95rem)] leading-[1.15] font-semibold tracking-[-0.032em] text-ink">
+                  <p className="font-mono text-[0.8125rem] tracking-[0.12em] text-indigo-brand tabular-nums">
+                    {num(i)}
+                  </p>
+                  <h2 className="mt-3 font-display text-[clamp(1.5rem,2.4vw,1.95rem)] leading-[1.15] font-semibold tracking-[-0.032em] text-ink">
                     {s.title}
                   </h2>
                   <div className="mt-6">
