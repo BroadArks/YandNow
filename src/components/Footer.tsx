@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { nav, site, solutions } from "@/lib/site";
+import { nav, site, solutions, telHref } from "@/lib/site";
 import Logo from "./Logo";
 import { MaskLines, Reveal } from "./motion-primitives";
 import ArrowLink from "./ArrowLink";
@@ -53,16 +53,21 @@ export default function Footer() {
               <div>
                 <dt className="eyebrow text-white/55">Reach us</dt>
                 <dd className="mt-3 space-y-1 text-[0.9375rem] text-white/70">
-                  <a href={`tel:${site.phone.replace(/\s/g, "")}`} className="block transition-colors hover:text-cyan-brand">
-                    {site.phone}
-                  </a>
+                  {site.phones.map((p) => (
+                    <a key={p} href={telHref(p)} className="block transition-colors hover:text-cyan-brand">
+                      {p}
+                    </a>
+                  ))}
                   <a href={`mailto:${site.email}`} className="block transition-colors hover:text-cyan-brand">
                     {site.email}
+                  </a>
+                  <a href={`mailto:${site.careersEmail}`} className="block transition-colors hover:text-cyan-brand">
+                    {site.careersEmail}
                   </a>
                 </dd>
               </div>
               <div>
-                <dt className="eyebrow text-white/55">Offices</dt>
+                <dt className="eyebrow text-white/55">Office</dt>
                 <dd className="mt-3 space-y-1 text-[0.9375rem] text-white/70">
                   {site.address.map((l) => (
                     <span key={l} className="block">
@@ -147,6 +152,10 @@ export default function Footer() {
       <div className="shell flex flex-col gap-3 border-t border-white/10 py-6 sm:flex-row sm:items-center sm:justify-between">
         <p className="font-mono text-[0.8125rem] tracking-[0.1em] text-white/50 uppercase">
           © {year} {site.legal}
+          <span className="mx-3 text-white/25">·</span>
+          <Link href="/privacy" className="transition-colors hover:text-cyan-brand">
+            Privacy
+          </Link>
         </p>
         <p className="font-mono text-[0.8125rem] tracking-[0.1em] text-white/50 uppercase">
           Photography from live programmes, 2020–2026

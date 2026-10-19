@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import ContactForm from "@/components/ContactForm";
 import Faq from "@/components/Faq";
-import { faqs, site, solutions } from "@/lib/site";
+import { faqs, site, solutions, telHref } from "@/lib/site";
 import { Reveal } from "@/components/motion-primitives";
 
 export const metadata: Metadata = {
@@ -41,18 +41,30 @@ export default function ContactPage() {
                 >
                   {site.email}
                 </a>
-                <a
-                  href={`tel:${site.phone.replace(/\s/g, "")}`}
-                  className="mt-2 block text-[1.0625rem] text-ink-70 transition-colors duration-300 hover:text-indigo-brand"
-                >
-                  {site.phone}
-                </a>
+                {site.phones.map((p) => (
+                  <a
+                    key={p}
+                    href={telHref(p)}
+                    className="mt-2 block text-[1.0625rem] text-ink-70 transition-colors duration-300 hover:text-indigo-brand"
+                  >
+                    {p}
+                  </a>
+                ))}
+                <p className="mt-5 text-[0.9375rem] text-ink-50">
+                  Careers:{" "}
+                  <a
+                    href={`mailto:${site.careersEmail}`}
+                    className="text-ink-70 transition-colors duration-300 hover:text-indigo-brand"
+                  >
+                    {site.careersEmail}
+                  </a>
+                </p>
               </div>
             </Reveal>
 
             <Reveal delay={0.08}>
               <div className="mt-10 border-t border-line pt-8">
-                <p className="eyebrow text-ink-30">Offices</p>
+                <p className="eyebrow text-ink-30">Office</p>
                 <address className="mt-4 space-y-1 text-[1.0625rem] not-italic text-ink-70">
                   {site.address.map((l) => (
                     <span key={l} className="block">

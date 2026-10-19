@@ -103,10 +103,10 @@ export default function Hero() {
 
             <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-1">
               <Link
-                href="/contact"
+                href="#solutions"
                 className="group inline-flex items-center gap-3 rounded-full bg-paper-warm px-7 py-4 font-medium text-ink transition-colors duration-300 hover:bg-cyan-brand"
               >
-                Get hands-on
+                Find Your Industry Route
                 <svg
                   width="15"
                   height="15"
@@ -129,7 +129,7 @@ export default function Hero() {
                 className="group inline-flex items-center gap-2 py-4 font-medium text-white/90 transition-colors duration-300 hover:text-white"
               >
                 <span className="relative">
-                  Explore courses
+                  View Programmes
                   <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-cyan-brand transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-x-100" />
                 </span>
               </Link>
