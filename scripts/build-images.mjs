@@ -74,7 +74,7 @@ const M=[
   [216,'engine-teardown',4/3,0],
   [215,'component-demo',4/3,0],
   [208,'engine-disassembly',4/3,0],
-  [152,'electrical-safety',4/3,17,10],
+  [152,'electrical-safety',4/3,17,14],
   [153,'electrical-bench',16/9,16,13],
   [154,'site-safety-cohort',16/9,0],
   [159,'safety-briefing',16/9,24,14],

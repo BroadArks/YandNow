@@ -259,7 +259,7 @@ export const photos = {
     "src": "/img/electrical-safety.webp",
     "w": 1400,
     "h": 1050,
-    "blur": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQAQCdASoQAAwAA8BgJaACdAEGivPEMAD+iSTIg05cjInKkgMRQR0YX3q8AT5br9gLFQokA+2fU2a64d2xoMKpfQ+X4dXYVmYrHl+aUS9V+2zGDG8O5olql1dMZtTeTi1fCq+AAAA="
+    "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAABwAgCdASoQAAwAA8BgJaACdAYuluVMqB3nguZgAP6tLvgd5PNiiH3XSmnre+tkErVWzekMxk7eEc3DEaLpVFB4dYEB4ctMExzhf9mBGvA/ww05hJikjc+JMGZl1dMZtTeVwUc8TgIqsaYAAAA="
   },
   "electrical-bench": {
     "src": "/img/electrical-bench.webp",

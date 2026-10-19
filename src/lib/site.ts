@@ -15,6 +15,7 @@ export const site = {
     "Sagar Premium Tower Phase-1",
     "JK Hospital Road, Kolar",
     "Bhopal 462042",
+    "India",
   ],
   social: [
     { label: "LinkedIn", href: "https://www.linkedin.com/company/broadarks/posts/?feedView=all" },
