@@ -133,7 +133,9 @@ export default async function BlogPostPage({ params }: PageProps<"/blog/[slug]">
                 sizes="(min-width: 1024px) 52rem, 100vw"
               />
             </Reveal>
-            <Reveal>
+            {/* amount 0: a long article is taller than any viewport fraction,
+                so a proportional threshold would leave it hidden. */}
+            <Reveal amount={0}>
               <div className="mt-14 max-w-[44rem] md:mt-16">
                 <Markdown>{post.content}</Markdown>
               </div>

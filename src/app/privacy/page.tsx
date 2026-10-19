@@ -10,6 +10,23 @@ export const metadata: Metadata = {
     "How Y&Now, operated by BroadArks Technology Private Limited, collects, uses, shares and protects personal information.",
 };
 
+/* Split the policy at its `## ` headings so each section reveals on its own:
+   one Reveal around the whole policy never reaches its in-view threshold,
+   because the text is several screens tall. */
+const sections = privacy.body
+  .trim()
+  .split(/^## /m)
+  .filter(Boolean)
+  .map((chunk) => {
+    const [title, ...rest] = chunk.split("\n");
+    const id = title
+      .toLowerCase()
+      .replace(/&/g, "and")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "");
+    return { id, title: title.trim(), body: rest.join("\n").trim() };
+  });
+
 export default function PrivacyPage() {
   return (
     <>
@@ -29,6 +46,13 @@ export default function PrivacyPage() {
           <MaskLines as="h1" className="display-lg mt-10 max-w-[22ch] font-semibold" lines={["Privacy Policy"]} />
 
           <Reveal delay={0.15}>
+            <p className="lede mt-7 max-w-[56ch] text-white/65">
+              How Y&amp;Now, operated by BroadArks Technology Private Limited, handles information
+              about visitors, learners, client representatives, trainers and applicants.
+            </p>
+          </Reveal>
+
+          <Reveal delay={0.22}>
             <p className="mt-10 border-t border-white/12 pt-7 font-mono text-[0.75rem] tracking-[0.12em] text-white/65 uppercase tabular-nums">
               Effective {privacy.effective} · Version {privacy.version}
             </p>
@@ -37,12 +61,43 @@ export default function PrivacyPage() {
       </section>
 
       <article className="bg-paper-warm pt-16 pb-24 md:pt-24 md:pb-32">
-        <div className="shell">
-          <Reveal>
-            <div className="max-w-[44rem]">
-              <Markdown>{privacy.body}</Markdown>
-            </div>
-          </Reveal>
+        <div className="shell grid gap-12 lg:grid-cols-[15rem_1fr] lg:gap-20">
+          <aside className="hidden lg:block">
+            <nav aria-label="Policy sections" className="sticky top-32 pt-1">
+              <p className="eyebrow text-ink-30">On this page</p>
+              <span className="mt-5 block h-px w-full bg-line" />
+              <ol className="mt-5 space-y-2.5">
+                {sections.map((s) => (
+                  <li key={s.id}>
+                    <a
+                      href={`#${s.id}`}
+                      className="block text-[0.875rem] leading-snug text-ink-50 transition-colors duration-300 hover:text-indigo-brand"
+                    >
+                      {s.title}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          </aside>
+
+          <div className="min-w-0 max-w-[44rem]">
+            {sections.map((s, i) => (
+              <Reveal key={s.id} amount={0.08}>
+                <section
+                  id={s.id}
+                  className={`scroll-mt-28 ${i > 0 ? "mt-14 border-t border-line pt-14" : ""}`}
+                >
+                  <h2 className="font-display text-[clamp(1.5rem,2.4vw,1.95rem)] leading-[1.15] font-semibold tracking-[-0.032em] text-ink">
+                    {s.title}
+                  </h2>
+                  <div className="mt-6">
+                    <Markdown>{s.body}</Markdown>
+                  </div>
+                </section>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </article>
     </>
