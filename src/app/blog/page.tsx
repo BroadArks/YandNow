@@ -22,8 +22,8 @@ export default async function BlogPage() {
         eyebrow="Insights · Blog"
         lines={["Notes from", "the floor."]}
         lede="What we learn running hands-on programmes across six verticals: how skills get built, measured and kept, written by the people who deliver them."
-        photo="stock-abstract-indigo"
-        photoAlt=""
+        photo="welding-bay"
+        photoAlt="A trainee arc welding under supervision as sparks fly, classmates watching in welding masks"
         breadcrumb={[
           { label: "Home", href: "/" },
           { label: "Blog", href: "/blog" },

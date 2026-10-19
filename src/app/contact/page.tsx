@@ -18,8 +18,8 @@ export default function ContactPage() {
         eyebrow="Contact"
         lines={["Tell us what", "the floor needs."]}
         lede="Send the role you are struggling to fill, or the mandate you need delivered. We reply within two working days with a scope, a timeline and a number."
-        photo="stock-abstract-waves"
-        photoAlt=""
+        photo="cnc-operation"
+        photoAlt="A trainer and a trainee in a hard hat talking through a job at a CNC machine"
         breadcrumb={[
           { label: "Home", href: "/" },
           { label: "Contact", href: "/contact" },
