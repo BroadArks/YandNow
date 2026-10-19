@@ -7,7 +7,7 @@ const BASE = "https://yandnow.com";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
 
-  const pages = ["", "/solutions", "/impact", "/about", "/contact", "/blog"].map((p) => ({
+  const pages = ["", "/solutions", "/impact", "/about", "/contact", "/blog", "/privacy"].map((p) => ({
     url: `${BASE}${p}`,
     lastModified: now,
     changeFrequency: "monthly" as const,

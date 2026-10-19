@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { MaskLines, Reveal } from "./motion-primitives";
+import { site } from "@/lib/site";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -42,7 +43,7 @@ export default function ContactForm({ verticals }: { verticals: string[] }) {
       String(data.get("message") ?? ""),
     ].join("\n");
 
-    const href = `mailto:connect@yandnow.com?subject=${encodeURIComponent(
+    const href = `mailto:${site.email}?subject=${encodeURIComponent(
       `Programme enquiry: ${data.get("org") || data.get("name")}`,
     )}&body=${encodeURIComponent(body)}`;
 
@@ -78,10 +79,10 @@ export default function ContactForm({ verticals }: { verticals: string[] }) {
               Send the draft and we will come back within two working days. If nothing
               opened, write to{" "}
               <a
-                href="mailto:connect@yandnow.com"
+                href={`mailto:${site.email}`}
                 className="font-medium text-indigo-brand underline decoration-1 underline-offset-[4px]"
               >
-                connect@yandnow.com
+                {site.email}
               </a>{" "}
               directly.
             </p>

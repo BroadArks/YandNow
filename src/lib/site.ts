@@ -6,15 +6,27 @@ export const site = {
   tagline: "Skills that hold up on the floor.",
   description:
     "YandNow builds workforce capability across six verticals (corporate, CSR, industry, defence, schools and micro-entrepreneurship) with hands-on training delivered at scale.",
-  email: "connect@yandnow.com",
-  phone: "+91 98765 43210",
-  address: ["YandNow Skill Development", "Bhopal · Pune · Guwahati", "India"],
+  email: "info@broadarks.com",
+  careersEmail: "careers@broadarks.com",
+  // One set of numbers serves every platform.
+  phones: ["0755 3553372", "0755 4566266"],
+  address: [
+    "CP-02, 7th Floor, Block C1",
+    "Sagar Premium Tower Phase-1",
+    "JK Hospital Road, Kolar",
+    "Bhopal 462042",
+  ],
   social: [
-    { label: "LinkedIn", href: "https://linkedin.com" },
-    { label: "Instagram", href: "https://instagram.com" },
-    { label: "YouTube", href: "https://youtube.com" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/company/broadarks/posts/?feedView=all" },
+    { label: "Instagram", href: "https://www.instagram.com/broadarkstech/" },
+    { label: "Facebook", href: "https://www.facebook.com/BroadArksTech" },
+    { label: "X", href: "https://x.com/BroadarksTech" },
   ],
 } as const;
+
+/** "0755 3553372" → "tel:+917553553372" */
+export const telHref = (phone: string) =>
+  `tel:+91${phone.replace(/\s/g, "").replace(/^0/, "")}`;
 
 export const nav = [
   { label: "Home", href: "/" },
