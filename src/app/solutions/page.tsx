@@ -25,8 +25,8 @@ export default function SolutionsPage() {
         eyebrow="Solutions"
         lines={["Six ways we", "build capability."]}
         lede="One delivery spine, six audiences. Pick the vertical that matches your mandate, or tell us the outcome and we will tell you which one it belongs in."
-        photo="engine-cohort"
-        photoAlt="A cohort of technicians gathered around a heavy-vehicle engine on a training stand"
+        photo="electrical-safety"
+        photoAlt="Two trainees in hard hats and safety gloves wiring a lamp circuit at an electrical bench"
         breadcrumb={[
           { label: "Home", href: "/" },
           { label: "Solutions", href: "/solutions" },

@@ -103,10 +103,10 @@ export default function Hero() {
 
             <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-1">
               <Link
-                href="#solutions"
+                href="/contact"
                 className="group inline-flex items-center gap-3 rounded-full bg-paper-warm px-7 py-4 font-medium text-ink transition-colors duration-300 hover:bg-cyan-brand"
               >
-                Find Your Industry Route
+                Talk to us
                 <svg
                   width="15"
                   height="15"
