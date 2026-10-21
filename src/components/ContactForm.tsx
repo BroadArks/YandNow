@@ -18,6 +18,9 @@ const LABEL =
 
 type Status = "idle" | "sending" | "sent";
 
+/** Digits plus the separators people type in phone numbers: + - ( ) and spaces. */
+const PHONE_CHARS = /[^\d+\-()\s]/g;
+
 /**
  * There is no backend wired up yet, so the form validates, then hands the
  * enquiry to the user's mail client rather than pretending to submit.
@@ -171,6 +174,8 @@ function Field({
   textarea?: boolean;
   autoComplete?: string;
 }) {
+  const [hint, setHint] = useState("");
+  const tel = type === "tel";
   const shared =
     "w-full border-0 border-b border-line bg-transparent pt-2 pb-3 text-[1.0625rem] text-ink outline-none transition-colors duration-300 placeholder:text-ink-30 focus:border-cyan-brand";
 
@@ -197,7 +202,23 @@ function Field({
           required={required}
           autoComplete={autoComplete}
           className={shared}
+          {...(tel && {
+            inputMode: "tel" as const,
+            maxLength: 20,
+            pattern: "\\+?[\\d\\s\\-\\(\\)]{7,20}",
+            title: "Please enter a valid phone number using digits only.",
+            onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
+              const clean = e.target.value.replace(PHONE_CHARS, "");
+              setHint(clean === e.target.value ? "" : "Numbers only, please.");
+              e.target.value = clean;
+            },
+          })}
         />
+      )}
+      {hint && (
+        <span role="status" className="mt-2 block text-[0.8125rem] text-indigo-brand">
+          {hint}
+        </span>
       )}
     </label>
   );
