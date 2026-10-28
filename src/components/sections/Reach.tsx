@@ -24,6 +24,11 @@ const REGIONS = [
   { name: "Punjab", note: "On-unit defence" },
   { name: "Himachal Pradesh", note: "Camp delivery" },
   { name: "Andhra Pradesh", note: "Transport academy" },
+  { name: "Kerala", note: "South" },
+  { name: "Tamil Nadu", note: "South" },
+  { name: "Arunachal Pradesh", note: "East" },
+  { name: "West Bengal", note: "East" },
+  { name: "Uttar Pradesh", note: "North" },
 ];
 
 type MapData = {

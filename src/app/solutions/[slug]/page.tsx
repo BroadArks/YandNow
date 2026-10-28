@@ -66,7 +66,7 @@ export default async function SolutionPage({ params }: PageProps<"/solutions/[sl
       <section className="bg-paper-warm py-20 md:py-28">
         <div className="shell grid gap-12 lg:grid-cols-[auto_1fr] lg:gap-20">
           <div className="lg:w-[13rem]">
-            <p className="eyebrow text-ink-30">Built for</p>
+            <p className="eyebrow text-ink-30">{s.slug === "csr" ? "Implementing partner" : "Built for"}</p>
             <span className="mt-5 block h-px w-full bg-line" />
           </div>
           <RevealGroup className="grid gap-x-10 gap-y-7 sm:grid-cols-2" stagger={0.06}>
