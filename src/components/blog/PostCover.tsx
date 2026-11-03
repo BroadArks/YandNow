@@ -36,12 +36,16 @@ export default function PostCover({
   imgClassName,
   sizes = "(min-width: 1024px) 40vw, 100vw",
   priority = false,
+  alt = "",
 }: {
   post: BlogPost;
   className?: string;
   imgClassName?: string;
   sizes?: string;
   priority?: boolean;
+  /** Empty on cards, where the post title sits beside the image; the article
+   *  page passes the title so its lead image is described. */
+  alt?: string;
 }) {
   const p = photos[fallbackPhoto(post)];
 
@@ -53,14 +57,14 @@ export default function PostCover({
         // eslint-disable-next-line @next/next/no-img-element
         <img
           src={post.coverImage}
-          alt=""
+          alt={alt}
           loading={priority ? "eager" : "lazy"}
           className={`h-full w-full object-cover ${imgClassName ?? ""}`}
         />
       ) : (
         <Image
           src={p.src}
-          alt=""
+          alt={alt}
           width={p.w}
           height={p.h}
           placeholder="blur"

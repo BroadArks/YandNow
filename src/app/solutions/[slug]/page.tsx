@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import PageHero from "@/components/PageHero";
+import JsonLd from "@/components/JsonLd";
+import { absoluteUrl, orgRef, pageMetadata, solutionSeo } from "@/lib/seo";
 import Frame from "@/components/Frame";
 import { programmes, solutions, solutionBySlug } from "@/lib/site";
 import {
@@ -22,7 +24,12 @@ export async function generateMetadata({
   const { slug } = await params;
   const s = solutionBySlug(slug);
   if (!s) return {};
-  return { title: s.title, description: s.summary };
+  const seo = solutionSeo[s.slug] ?? { title: s.title, description: s.summary };
+  return pageMetadata({
+    ...seo,
+    path: `/solutions/${s.slug}`,
+    image: `/og/solutions-${s.slug}.jpg`,
+  });
 }
 
 export default async function SolutionPage({ params }: PageProps<"/solutions/[slug]">) {
@@ -46,8 +53,30 @@ export default async function SolutionPage({ params }: PageProps<"/solutions/[sl
   const solo = related.length === 1;
   const accentText = s.accent === "cyan" ? "text-cyan-brand" : "text-indigo-brand";
 
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: s.title,
+    serviceType: s.title,
+    description: solutionSeo[s.slug]?.description ?? s.summary,
+    url: absoluteUrl(`/solutions/${s.slug}`),
+    image: absoluteUrl(`/og/solutions-${s.slug}.jpg`),
+    provider: orgRef,
+    areaServed: { "@type": "Country", name: "India" },
+    audience: s.audience.map((a) => ({ "@type": "Audience", audienceType: a })),
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: s.title,
+      itemListElement: s.offerings.map((o) => ({
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: o.title, description: o.body },
+      })),
+    },
+  };
+
   return (
     <>
+      <JsonLd data={serviceJsonLd} />
       <PageHero
         eyebrow={`Vertical ${s.index} · ${s.short}`}
         lines={s.title.split(" ").length > 2 ? splitTitle(s.title) : [s.title]}

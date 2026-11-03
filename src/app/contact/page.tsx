@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageHero from "@/components/PageHero";
 import ContactForm from "@/components/ContactForm";
 import Faq from "@/components/Faq";
 import { faqs, site, solutions, telHref } from "@/lib/site";
 import { Reveal } from "@/components/motion-primitives";
 
-export const metadata: Metadata = {
-  title: "Contact",
+export const metadata: Metadata = pageMetadata({
+  title: "Contact Us: Start a Skill Development Programme",
   description:
-    "Start a skill-development programme with YandNow. Tell us the role you need filled or the mandate you need delivered.",
-};
+    "Start a skill-development programme with YandNow. Tell us the role you need filled or the mandate you need delivered, and we reply within two working days.",
+  path: "/contact",
+  image: "/og/contact.jpg",
+});
 
 export default function ContactPage() {
   return (

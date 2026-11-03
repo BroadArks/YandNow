@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import Markdown from "@/components/blog/Markdown";
 import { MaskLines, Reveal } from "@/components/motion-primitives";
 import { privacy } from "@/lib/privacy";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Privacy Policy",
   description:
     "How Y&Now, operated by BroadArks Technology Private Limited, collects, uses, shares and protects personal information.",
-};
+  path: "/privacy",
+  image: "/og/privacy.jpg",
+});
 
 /* Split the policy at its `## ` headings so each section reveals on its own:
    one Reveal around the whole policy never reaches its in-view threshold,

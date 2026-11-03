@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageHero from "@/components/PageHero";
 import PartnerMarquee from "@/components/sections/PartnerMarquee";
 import ArchiveExplorer from "@/components/sections/ArchiveExplorer";
 import { metrics, programmes } from "@/lib/site";
 import { Counter, MaskLines, Reveal } from "@/components/motion-primitives";
 
-export const metadata: Metadata = {
-  title: "Impact",
+export const metadata: Metadata = pageMetadata({
+  title: "Impact: 14 Skilling Programmes Delivered, 2020–2026",
   description:
     "The YandNow programme archive: fourteen delivered programmes from 2020 to 2026, with partners, trades and photographs from each cohort.",
-};
+  path: "/impact",
+  image: "/og/impact.jpg",
+});
 
 // The archive page words each headline figure for the verification behind it,
 // rather than the homepage's shorter notes.

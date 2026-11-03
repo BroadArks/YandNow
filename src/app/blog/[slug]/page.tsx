@@ -4,7 +4,9 @@ import { notFound } from "next/navigation";
 import Markdown from "@/components/blog/Markdown";
 import PostCover from "@/components/blog/PostCover";
 import { MaskLines, Reveal, RevealGroup, RevealItem } from "@/components/motion-primitives";
-import { formatBlogDate, getAllPosts, getPostBySlug, getRelatedPosts } from "@/lib/blog";
+import JsonLd from "@/components/JsonLd";
+import { formatBlogDate, getAllPosts, getPostBySlug, getRelatedPosts, type BlogPost } from "@/lib/blog";
+import { BRAND, SITE_URL, absoluteUrl, breadcrumbJsonLd, orgRef } from "@/lib/seo";
 
 export const revalidate = 60;
 
@@ -22,21 +24,37 @@ export async function generateMetadata({
   const title = post.seo.metaTitle ?? post.title;
   const description = post.seo.metaDescription ?? post.excerpt;
   const image = post.seo.ogImage ?? post.coverImage;
+  const images = image
+    ? [{ url: image, alt: post.title }]
+    : [{ url: "/og/blog.jpg", width: 1200, height: 630, alt: post.title }];
   return {
     // The CMS usually supplies a full "… | Y&Now" title; use it verbatim.
     title: post.seo.metaTitle ? { absolute: title } : title,
     description,
     keywords: post.seo.keywords,
-    alternates: post.seo.canonicalUrl ? { canonical: post.seo.canonicalUrl } : undefined,
+    alternates: { canonical: canonicalFor(post) },
     openGraph: {
       type: "article",
+      siteName: BRAND,
+      locale: "en_IN",
+      url: `/blog/${post.slug}`,
       title,
       description,
       publishedTime: post.date,
       authors: [post.author.name],
-      images: image ? [image] : undefined,
+      section: post.category,
+      images,
     },
+    twitter: { card: "summary_large_image", title, description, images },
   };
+}
+
+/** The CMS canonical when one is set, else the post's own URL — on www, the
+ *  host the apex redirects to. */
+function canonicalFor(post: BlogPost) {
+  const url = post.seo.canonicalUrl?.trim();
+  if (!url) return `/blog/${post.slug}`;
+  return url.replace(/^https?:\/\/yandnow\.com/i, SITE_URL);
 }
 
 export default async function BlogPostPage({ params }: PageProps<"/blog/[slug]">) {
@@ -45,8 +63,36 @@ export default async function BlogPostPage({ params }: PageProps<"/blog/[slug]">
   if (!post) notFound();
   const related = await getRelatedPosts(slug, 3);
 
+  const url = absoluteUrl(`/blog/${post.slug}`);
+  const postJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.seo.metaDescription ?? post.excerpt,
+    image: absoluteUrl(post.seo.ogImage ?? post.coverImage ?? "/og/blog.jpg"),
+    datePublished: post.date,
+    dateModified: post.date,
+    articleSection: post.category,
+    keywords: post.seo.keywords,
+    inLanguage: "en-IN",
+    url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    author: { "@type": "Organization", name: post.author.name, url: SITE_URL },
+    publisher: orgRef,
+  };
+
   return (
     <>
+      <JsonLd
+        data={[
+          postJsonLd,
+          breadcrumbJsonLd([
+            { label: "Home", href: "/" },
+            { label: "Blog", href: "/blog" },
+            { label: post.title, href: `/blog/${post.slug}` },
+          ]),
+        ]}
+      />
       {/* Header: same dark plate as every inner page, text-led */}
       <section className="relative overflow-hidden bg-indigo-ink text-paper-warm">
         <div className="shell pt-[132px] pb-16 md:pt-[168px] md:pb-24">
@@ -128,6 +174,7 @@ export default async function BlogPostPage({ params }: PageProps<"/blog/[slug]">
             <Reveal y={24}>
               <PostCover
                 post={post}
+                alt={post.title}
                 priority
                 className="aspect-[16/9] w-full max-w-[52rem]"
                 sizes="(min-width: 1024px) 52rem, 100vw"

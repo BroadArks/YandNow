@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Frame from "@/components/Frame";
@@ -12,11 +13,13 @@ import {
   StatNumber,
 } from "@/components/motion-primitives";
 
-export const metadata: Metadata = {
-  title: "Solutions",
+export const metadata: Metadata = pageMetadata({
+  title: "Skill Development Solutions Across Six Verticals",
   description:
     "Six skill-development verticals: corporate training, CSR programmes, industry solutions, defence programmes, school solutions and micro-entrepreneurship.",
-};
+  path: "/solutions",
+  image: "/og/solutions.jpg",
+});
 
 export default function SolutionsPage() {
   return (
