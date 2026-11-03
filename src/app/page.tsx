@@ -1,3 +1,6 @@
+import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { HOME_DESCRIPTION, HOME_TITLE, organizationJsonLd, pageMetadata, websiteJsonLd } from "@/lib/seo";
 import Hero from "@/components/sections/Hero";
 import PartnerMarquee from "@/components/sections/PartnerMarquee";
 import Statement from "@/components/sections/Statement";
@@ -8,9 +11,18 @@ import HorizontalGallery from "@/components/sections/HorizontalGallery";
 import Testimonials from "@/components/sections/Testimonials";
 import Reach from "@/components/sections/Reach";
 
+export const metadata: Metadata = pageMetadata({
+  title: HOME_TITLE,
+  absoluteTitle: true,
+  description: HOME_DESCRIPTION,
+  path: "/",
+  image: "/og/home.jpg",
+});
+
 export default function Home() {
   return (
     <>
+      <JsonLd data={[organizationJsonLd, websiteJsonLd]} />
       <Hero />
       <PartnerMarquee />
       <Statement />

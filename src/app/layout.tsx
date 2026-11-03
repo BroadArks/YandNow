@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono, Manrope } from "next/font/google";
 import "./globals.css";
-import { site } from "@/lib/site";
+import { BRAND, HOME_DESCRIPTION, HOME_TITLE, SITE_URL } from "@/lib/seo";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
@@ -32,20 +32,39 @@ const jetbrains = JetBrains_Mono({
   display: "swap",
 });
 
+// Pages override title, description, canonical and share card through
+// pageMetadata(); these are the fallbacks and the site-wide fields.
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yandnow.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: `${site.name} | ${site.tagline}`,
-    template: `%s · ${site.name}`,
+    default: HOME_TITLE,
+    template: `%s | ${BRAND}`,
   },
-  description: site.description,
+  description: HOME_DESCRIPTION,
+  applicationName: BRAND,
+  authors: [{ name: BRAND, url: SITE_URL }],
+  creator: BRAND,
+  publisher: "BroadArks Technology Private Limited",
+  formatDetection: { telephone: false, email: false, address: false },
   openGraph: {
-    title: `${site.name} | ${site.tagline}`,
-    description: site.description,
     type: "website",
-    siteName: site.name,
+    siteName: BRAND,
+    locale: "en_IN",
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
+    images: [{ url: "/og/home.jpg", width: 1200, height: 630, alt: HOME_TITLE }],
   },
-  robots: { index: true, follow: true },
+  twitter: {
+    card: "summary_large_image",
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
+    images: ["/og/home.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+  },
 };
 
 export const viewport: Viewport = {

@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Frame from "./Frame";
+import JsonLd from "./JsonLd";
+import { breadcrumbJsonLd } from "@/lib/seo";
 import type { PhotoKey } from "@/lib/photos";
 import { MaskLines, Reveal, StatNumber } from "./motion-primitives";
 
@@ -29,6 +31,7 @@ export default function PageHero({
   return (
     <section className="relative overflow-hidden bg-indigo-ink text-paper-warm">
       <div className="shell pt-[132px] pb-16 md:pt-[168px] md:pb-24">
+        {breadcrumb && <JsonLd data={breadcrumbJsonLd(breadcrumb)} />}
         {breadcrumb && (
           <Reveal>
             <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2">

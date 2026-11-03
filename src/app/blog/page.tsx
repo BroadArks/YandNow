@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageHero from "@/components/PageHero";
 import BlogIndex from "@/components/blog/BlogIndex";
 import { getAllPosts } from "@/lib/blog";
@@ -7,11 +8,13 @@ import { getAllPosts } from "@/lib/blog";
 // most once a minute so a publish shows up without a redeploy.
 export const revalidate = 60;
 
-export const metadata: Metadata = {
-  title: "Blog",
+export const metadata: Metadata = pageMetadata({
+  title: "Blog: Workforce Training & CSR Skilling Insights",
   description:
     "Notes from YandNow's training floors: workforce learning, CSR skilling, industry trades and what actually changes outcomes.",
-};
+  path: "/blog",
+  image: "/og/blog.jpg",
+});
 
 export default async function BlogPage() {
   const posts = await getAllPosts();

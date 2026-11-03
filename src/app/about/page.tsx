@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageHero from "@/components/PageHero";
 import Frame from "@/components/Frame";
 import PartnerMarquee from "@/components/sections/PartnerMarquee";
@@ -15,11 +16,13 @@ import {
   ScaleInFrame,
 } from "@/components/motion-primitives";
 
-export const metadata: Metadata = {
-  title: "About",
+export const metadata: Metadata = pageMetadata({
+  title: "About Us: Hands-On Skill Development Across India",
   description:
     "YandNow is a skill development organisation delivering hands-on technical training across India: six verticals, nineteen states, fixed and mobile centres.",
-};
+  path: "/about",
+  image: "/og/about.jpg",
+});
 
 const PRINCIPLES = [
   {
